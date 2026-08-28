@@ -1,0 +1,38 @@
+-- Paste these entries into qb-core/shared/items.lua
+-- Add matching images named <item>.png to your inventory html/images folder.
+
+--[[
+    black_blue_crown = { name = 'black_blue_crown', label = 'Black Blue Crown', weight = 50, type = 'item', image = 'black_blue_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    black_cyan_crown = { name = 'black_cyan_crown', label = 'Black Cyan Crown', weight = 50, type = 'item', image = 'black_cyan_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    black_gold_crown = { name = 'black_gold_crown', label = 'Black Gold Crown', weight = 50, type = 'item', image = 'black_gold_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    black_green_crown = { name = 'black_green_crown', label = 'Black Green Crown', weight = 50, type = 'item', image = 'black_green_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    black_pink_crown = { name = 'black_pink_crown', label = 'Black Pink Crown', weight = 50, type = 'item', image = 'black_pink_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    black_purple_crown = { name = 'black_purple_crown', label = 'Black Purple Crown', weight = 50, type = 'item', image = 'black_purple_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    black_red_crown = { name = 'black_red_crown', label = 'Black Red Crown', weight = 50, type = 'item', image = 'black_red_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    black_white_crown = { name = 'black_white_crown', label = 'Black White Crown', weight = 50, type = 'item', image = 'black_white_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    black_yellow_crown = { name = 'black_yellow_crown', label = 'Black Yellow Crown', weight = 50, type = 'item', image = 'black_yellow_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    gold_blue_crown = { name = 'gold_blue_crown', label = 'Gold Blue Crown', weight = 50, type = 'item', image = 'gold_blue_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    gold_cyan_crown = { name = 'gold_cyan_crown', label = 'Gold Cyan Crown', weight = 50, type = 'item', image = 'gold_cyan_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    gold_green_crown = { name = 'gold_green_crown', label = 'Gold Green Crown', weight = 50, type = 'item', image = 'gold_green_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    gold_pink_crown = { name = 'gold_pink_crown', label = 'Gold Pink Crown', weight = 50, type = 'item', image = 'gold_pink_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    gold_purple_crown = { name = 'gold_purple_crown', label = 'Gold Purple Crown', weight = 50, type = 'item', image = 'gold_purple_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    gold_red_crown = { name = 'gold_red_crown', label = 'Gold Red Crown', weight = 50, type = 'item', image = 'gold_red_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    gold_white_crown = { name = 'gold_white_crown', label = 'Gold White Crown', weight = 50, type = 'item', image = 'gold_white_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    silver_blue_crown = { name = 'silver_blue_crown', label = 'Silver Blue Crown', weight = 50, type = 'item', image = 'silver_blue_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    silver_cyan_crown = { name = 'silver_cyan_crown', label = 'Silver Cyan Crown', weight = 50, type = 'item', image = 'silver_cyan_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    silver_gold_crown = { name = 'silver_gold_crown', label = 'Silver Gold Crown', weight = 50, type = 'item', image = 'silver_gold_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    silver_green_crown = { name = 'silver_green_crown', label = 'Silver Green Crown', weight = 50, type = 'item', image = 'silver_green_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    silver_pink_crown = { name = 'silver_pink_crown', label = 'Silver Pink Crown', weight = 50, type = 'item', image = 'silver_pink_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    silver_purple_crown = { name = 'silver_purple_crown', label = 'Silver Purple Crown', weight = 50, type = 'item', image = 'silver_purple_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    silver_red_crown = { name = 'silver_red_crown', label = 'Silver Red Crown', weight = 50, type = 'item', image = 'silver_red_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    silver_yellow_crown = { name = 'silver_yellow_crown', label = 'Silver Yellow Crown', weight = 50, type = 'item', image = 'silver_yellow_crown.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    halo_black = { name = 'halo_black', label = 'Halo Black', weight = 50, type = 'item', image = 'halo_black.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    halo_blue = { name = 'halo_blue', label = 'Halo Blue', weight = 50, type = 'item', image = 'halo_blue.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    halo_gold = { name = 'halo_gold', label = 'Halo Gold', weight = 50, type = 'item', image = 'halo_gold.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    halo_green = { name = 'halo_green', label = 'Halo Green', weight = 50, type = 'item', image = 'halo_green.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    halo_pink = { name = 'halo_pink', label = 'Halo Pink', weight = 50, type = 'item', image = 'halo_pink.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    halo_purple = { name = 'halo_purple', label = 'Halo Purple', weight = 50, type = 'item', image = 'halo_purple.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    halo_red = { name = 'halo_red', label = 'Halo Red', weight = 50, type = 'item', image = 'halo_red.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+    halo_white = { name = 'halo_white', label = 'Halo White', weight = 50, type = 'item', image = 'halo_white.png', unique = true, useable = true, shouldClose = true, description = 'Wearable head cosmetic' },
+]]
+
