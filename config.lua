@@ -11,6 +11,7 @@ Config.Inventory = 'auto' -- 'auto' | 'ox' | 'qb' | 'esx' | 'qs'
 Config.ReplaceSameCategory = {
     crown = true,
     halo = true,
+    plushie = true,
 }
 
 Config.Persist = true
@@ -72,9 +73,39 @@ local function titleCase(name)
 end
 
 local function inferCategory(name)
+    if name:find('plushie', 1, true) then return 'plushie' end
     if name:find('halo', 1, true) then return 'halo' end
     if name:find('crown', 1, true) then return 'crown' end
     return 'misc'
+end
+
+local PLUSH_LABELS = {
+    abelha = 'Bee',
+    capivara = 'Capybara',
+    coelho = 'Rabbit',
+    dinossauro = 'Dinosaur',
+    foxwitch = 'Fox Witch',
+    gato = 'Cat',
+    jacare = 'Alligator',
+    monk = 'Monkey',
+    pinguimrosa = 'Pink Penguin',
+    pit = 'Pitbull',
+    polvo = 'Octopus',
+    rinoceronte = 'Rhino',
+    ursinhocarinhoso = 'Care Bear',
+    vaca = 'Cow',
+}
+
+local function nicerPlushLabel(name)
+    local n = name:gsub('_plushie_shop$', ''):gsub('_plushie$', '')
+    n = n:gsub('alien', ' alien'):gsub('cow', ' cow'):gsub('duck', ' duck')
+    n = n:gsub('_+', ' '):gsub('%s+', ' '):gsub('^%s+', ''):gsub('%s+$', '')
+    local key = n:match('^([%a]+)')
+    if key and PLUSH_LABELS[key] then
+        local rest = n:sub(#key + 1)
+        n = PLUSH_LABELS[key] .. rest
+    end
+    return titleCase(n) .. ' Plushie'
 end
 
 for name, data in pairs(Config.Toys) do
@@ -87,5 +118,11 @@ for name, data in pairs(Config.Toys) do
     data.yR = data.yR or 0.0
     data.zR = data.zR or 0.0
     data.category = data.category or inferCategory(name)
-    data.label = data.label or titleCase(name)
+    if not data.label or data.label == '' then
+        if data.category == 'plushie' then
+            data.label = nicerPlushLabel(name)
+        else
+            data.label = titleCase(name)
+        end
+    end
 end

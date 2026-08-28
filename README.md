@@ -1,22 +1,24 @@
 # djfivem-headcosmetics
 
-Wear crowns and halos on the player's head from a normal inventory item. The prop attaches to `SKEL_Head` (bone `31086`) so it sits on hair and hats instead of replacing a clothing slot.
+Wear crowns and halos on the head, and hug handheld plushies, from normal inventory items.
 
-You do **not** need Renewed Weapon Carry. Keep your existing crown and halo **stream resources** started — this script only attaches those models when the inventory item is used.
+You do **not** need Renewed Weapon Carry. Keep your existing **stream resources** started — this script only attaches those models when the inventory item is used.
 
-## Why the old script did not fully work
+## What it does
 
-The two files you sent were:
-
-- a `Config.Toys` table with models and head offsets
-- a client toggle that attaches a prop when `n93_halos:useHalo` fires
-
-There was no server file registering those names as usable items, so using an inventory item never called the attach code. This resource adds that, keeps your offsets, and syncs the prop to other players with statebags (local objects, so it still works under entity lockdown).
+- Crowns and halos attach to `SKEL_Head` (bone `31086`) so they sit on hair and hats
+- Plushies hug against the chest (bone `24817`) with the `impexp_int-0` hold animation from your original config
+- One crown + one halo + one plushie at a time
+- Use the item to put it on, use it again to take it off (item is not consumed)
 
 ## Install
 
 1. Keep the folder named `djfivem-headcosmetics` (ox_inventory export depends on this name).
-2. Leave your crown/halo stream resources started (the ones with `crown_props.ytyp` and `n93_halos.ytyp`). Do not copy those files into this resource.
+2. Leave these stream resources started (do not copy the `.ydr` files into this resource):
+   - crowns: `crown_props.ytyp`
+   - halos: `n93_halos.ytyp`
+   - shop plushies: `pelucias_plushie_shop.ytyp`
+   - alien / cow / duck plush packs if you use those models
 3. Add the inventory items:
    - **ox_inventory:** paste `install/ox_inventory_items.lua` into `ox_inventory/data/items.lua`
    - **qb-inventory:** paste `install/qb_items.lua` into `qb-core/shared/items.lua`
@@ -24,41 +26,24 @@ There was no server file registering those names as usable items, so using an in
 4. Copy every PNG from `install/images/` into your inventory images folder:
    - ox_inventory: `ox_inventory/web/images/`
    - qb-inventory: `qb-inventory/html/images/`
-5. Add to `server.cfg` after your framework, inventory, and stream resources:
-
-```
-ensure your-crown-stream-resource
-ensure your-halo-stream-resource
-ensure djfivem-headcosmetics
-```
-
-6. Restart the server (or `ensure ox_inventory` then `ensure djfivem-headcosmetics` if you only added items).
-
-Give yourself a test item:
+5. `ensure djfivem-headcosmetics` after framework, inventory, and stream resources.
 
 ```
 /giveitem [id] black_blue_crown 1
 /giveitem [id] halo_gold 1
+/giveitem [id] bear_01_plushie_shop 1
 ```
-
-Use the item in the inventory. Use it again to take it off. A crown and a halo can be worn together. Using a second crown replaces the first.
 
 ## Commands
 
 | Command | What it does |
 | --- | --- |
-| Use the inventory item | Toggle that crown or halo |
-| `/wearcosmetic black_blue_crown` | Same toggle (debug) |
-| `/clearcosmetics` | Remove everything you are wearing |
-| `/adjustcosmetic black_blue_crown` | Live placement editor |
+| Use the inventory item | Toggle that cosmetic |
+| `/wearcosmetic bear_01_plushie_shop` | Same toggle (debug) |
+| `/clearcosmetics` | Remove everything |
+| `/adjustcosmetic bear_01_plushie_shop` | Live placement editor |
 
-Editor keys: arrow keys move X/Y, Page Up/Down move Z, numpad 4/6/8/5/7/9 rotate, Alt = fine, Shift = coarse, Enter prints a `Config.Toys` line to F8, Backspace cancels.
-
-## Adding another cosmetic
-
-1. Stream the new `.ydr` from your props resource (and include it in that resource's `.ytyp`).
-2. Add a row to `Config.Toys` in `config.lua` (copy a crown or halo and change the name/model).
-3. Add the matching inventory item and a PNG named `<item>.png`.
+Editor keys: arrow keys move X/Y, Page Up/Down move Z, numpad 4/6/8/5/7/9 rotate, Alt = fine, Shift = coarse, Enter prints a config line to F8, Backspace cancels.
 
 ## Frameworks
 
