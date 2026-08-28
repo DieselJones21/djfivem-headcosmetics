@@ -6,8 +6,10 @@ local function notify(msg, nType)
     nType = nType or 'inform'
 
     if GetResourceState('ox_lib') == 'started' then
-        exports.ox_lib:notify({ description = msg, type = nType })
-        return
+        local ok = pcall(function()
+            exports.ox_lib:notify({ description = msg, type = nType })
+        end)
+        if ok then return end
     end
 
     if GetResourceState('qb-core') == 'started' or GetResourceState('qbx_core') == 'started' then
