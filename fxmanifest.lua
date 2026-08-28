@@ -5,7 +5,7 @@ lua54 'yes'
 name 'djfivem-headcosmetics'
 author 'DieselJones'
 description 'Wear crowns, halos, and hug plushies from inventory items'
-version '1.0.0'
+version '1.1.0'
 
 shared_scripts {
     'config.lua',

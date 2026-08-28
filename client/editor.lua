@@ -54,7 +54,7 @@ local function startEditor(name)
 end
 
 RegisterCommand(Config.EditorCommand, function(_, args)
-    if Config.EditorAce and not IsPlayerAceAllowed(PlayerId(), Config.EditorAce) then
+    if Config.EditorAce and not IsAceAllowed(Config.EditorAce) then
         TriggerEvent('djfivem-headcosmetics:notify', 'You cannot use the placement editor', 'error')
         return
     end

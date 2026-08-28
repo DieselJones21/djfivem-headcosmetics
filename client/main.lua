@@ -1,6 +1,9 @@
 local spawned = {} -- [serverId] = { [itemName] = entity }
 local lastPed = {} -- [serverId] = ped handle
 local playingAnim = {} -- [serverId] = { dict = string, name = string }
+local attaching = {} -- [serverId] = { [itemName] = true }
+local modelFailUntil = {} -- [hash] = GetGameTimer()
+local modelWaitStarted = {} -- [hash] = GetGameTimer()
 
 local function notify(msg, nType)
     if not Config.Notify then return end
@@ -28,17 +31,29 @@ end
 
 local function loadModel(model)
     local hash = type(model) == 'number' and model or joaat(model)
-    if HasModelLoaded(hash) then return hash end
+    if HasModelLoaded(hash) then
+        modelWaitStarted[hash] = nil
+        return hash
+    end
+    if modelFailUntil[hash] and GetGameTimer() < modelFailUntil[hash] then
+        return nil, 'cooldown'
+    end
 
     RequestModel(hash)
-    local timeout = GetGameTimer() + 7000
-    while not HasModelLoaded(hash) do
-        if GetGameTimer() > timeout then
-            return nil
-        end
-        Wait(10)
+    if HasModelLoaded(hash) then
+        modelWaitStarted[hash] = nil
+        return hash
     end
-    return hash
+
+    -- Do not Wait() here: the 1s sync loop and statebag handler can run at the
+    -- same time, and a blocking load froze nearby players' props for seconds.
+    modelWaitStarted[hash] = modelWaitStarted[hash] or GetGameTimer()
+    if GetGameTimer() - modelWaitStarted[hash] > 8000 then
+        modelFailUntil[hash] = GetGameTimer() + 15000
+        modelWaitStarted[hash] = nil
+        return nil, 'failed'
+    end
+    return nil, 'waiting'
 end
 
 local function deleteProp(entity)
@@ -62,15 +77,18 @@ local function clearPlayer(serverId)
     spawned[serverId] = nil
     lastPed[serverId] = nil
     playingAnim[serverId] = nil
+    attaching[serverId] = nil
 end
 
 local function attachOne(ped, name)
     local data = Config.Toys[name]
     if not data or ped == 0 or not DoesEntityExist(ped) then return nil end
 
-    local hash = loadModel(data.model)
+    local hash, reason = loadModel(data.model)
     if not hash then
-        print(('[djfivem-headcosmetics] model failed to load: %s (is stream/ + ytyp started?)'):format(data.model))
+        if reason == 'failed' then
+            print(('[djfivem-headcosmetics] model failed to load: %s (is stream/ + ytyp started?)'):format(data.model))
+        end
         return nil
     end
 
@@ -96,16 +114,15 @@ local function attachOne(ped, name)
     return obj
 end
 
+local function isLocalServerId(serverId)
+    return serverId == GetPlayerServerId(PlayerId())
+end
+
 local function loadAnimDict(dict)
     if not dict or dict == '' then return false end
     if HasAnimDictLoaded(dict) then return true end
     RequestAnimDict(dict)
-    local timeout = GetGameTimer() + 3000
-    while not HasAnimDictLoaded(dict) do
-        if GetGameTimer() > timeout then return false end
-        Wait(10)
-    end
-    return true
+    return HasAnimDictLoaded(dict)
 end
 
 local function stopPlushAnim(ped, serverId)
@@ -116,7 +133,18 @@ local function stopPlushAnim(ped, serverId)
     playingAnim[serverId] = nil
 end
 
+-- Only the local player should TaskPlayAnim. Other clients already see that
+-- player's replicated animation; driving it from here fights their game state.
 local function syncAnim(ped, serverId, want)
+    if not isLocalServerId(serverId) then return end
+
+    if IsPedInAnyVehicle(ped, false) or IsPedRagdoll(ped) or IsEntityDead(ped) then
+        if playingAnim[serverId] then
+            stopPlushAnim(ped, serverId)
+        end
+        return
+    end
+
     local chosen
     for name in pairs(want) do
         local data = Config.Toys[name]
@@ -175,18 +203,31 @@ local function syncPlayer(serverId, list)
     local pedChanged = lastPed[serverId] ~= ped
     lastPed[serverId] = ped
 
+    local drop = {}
     for name, entity in pairs(spawned[serverId]) do
         if not want[name] or pedChanged or not DoesEntityExist(entity) then
-            deleteProp(entity)
-            spawned[serverId][name] = nil
+            drop[#drop + 1] = name
         end
     end
+    for i = 1, #drop do
+        local name = drop[i]
+        deleteProp(spawned[serverId][name])
+        spawned[serverId][name] = nil
+    end
+
+    attaching[serverId] = attaching[serverId] or {}
 
     for name in pairs(want) do
-        if Config.Toys[name] and (not spawned[serverId][name] or not DoesEntityExist(spawned[serverId][name])) then
-            local obj = attachOne(ped, name)
-            if obj then
-                spawned[serverId][name] = obj
+        if Config.Toys[name] then
+            local existing = spawned[serverId][name]
+            local alive = existing and DoesEntityExist(existing)
+            if not alive and not attaching[serverId][name] then
+                attaching[serverId][name] = true
+                local obj = attachOne(ped, name)
+                attaching[serverId][name] = nil
+                if obj then
+                    spawned[serverId][name] = obj
+                end
             end
         end
     end
@@ -217,18 +258,28 @@ CreateThread(function()
             seen[serverId] = true
             syncPlayer(serverId, Player(serverId).state[Config.StateBag])
         end
+        local stale = {}
         for serverId in pairs(spawned) do
             if not seen[serverId] then
-                clearPlayer(serverId)
+                stale[#stale + 1] = serverId
             end
+        end
+        for i = 1, #stale do
+            clearPlayer(stale[i])
         end
     end
 end)
 
 AddEventHandler('onResourceStop', function(resource)
     if resource ~= GetCurrentResourceName() then return end
+    local localId = GetPlayerServerId(PlayerId())
+    stopPlushAnim(PlayerPedId(), localId)
+    local ids = {}
     for serverId in pairs(spawned) do
-        clearPlayer(serverId)
+        ids[#ids + 1] = serverId
+    end
+    for i = 1, #ids do
+        clearPlayer(ids[i])
     end
 end)
 
@@ -257,7 +308,6 @@ local function tellServerReady()
     TriggerServerEvent('djfivem-headcosmetics:playerReady')
 end
 
-AddEventHandler('QBCore:Client:OnPlayerLoaded', tellServerReady)
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', tellServerReady)
 RegisterNetEvent('esx:playerLoaded', tellServerReady)
 
