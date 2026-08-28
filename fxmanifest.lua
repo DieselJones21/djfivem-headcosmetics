@@ -20,9 +20,8 @@ server_scripts {
     'server/main.lua',
 }
 
--- Registers the streamed crown/halo archetypes. Copy your .ydr + .ytyp files into stream/.
-data_file 'DLC_ITYP_REQUEST' 'stream/crown_props.ytyp'
-data_file 'DLC_ITYP_REQUEST' 'stream/n93_halos.ytyp'
+-- Models are streamed by your existing crown/halo resources.
+-- Do not add DLC_ITYP_REQUEST here or the same .ydr files will load twice.
 
 dependencies {
     '/onesync',

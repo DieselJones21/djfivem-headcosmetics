@@ -2,7 +2,7 @@
 
 Wear crowns and halos on the player's head from a normal inventory item. The prop attaches to `SKEL_Head` (bone `31086`) so it sits on hair and hats instead of replacing a clothing slot.
 
-You do **not** need Renewed Weapon Carry. That script is for holstered weapons. Turning crowns into fake weapons is a workaround. This resource uses the same attach method as the `n93_halos` client you already had, plus the missing inventory + sync pieces.
+You do **not** need Renewed Weapon Carry. Keep your existing crown and halo **stream resources** started — this script only attaches those models when the inventory item is used.
 
 ## Why the old script did not fully work
 
@@ -16,18 +16,23 @@ There was no server file registering those names as usable items, so using an in
 ## Install
 
 1. Keep the folder named `djfivem-headcosmetics` (ox_inventory export depends on this name).
-2. Copy every `.ydr` and `.ytyp` listed in `stream/README.md` into `stream/`.
+2. Leave your crown/halo stream resources started (the ones with `crown_props.ytyp` and `n93_halos.ytyp`). Do not copy those files into this resource.
 3. Add the inventory items:
    - **ox_inventory:** paste `install/ox_inventory_items.lua` into `ox_inventory/data/items.lua`
-   - **qb-inventory:** paste `install/qb_items.lua` into `qb-core/shared/items.lua` and add `<item>.png` images
+   - **qb-inventory:** paste `install/qb_items.lua` into `qb-core/shared/items.lua`
    - **ESX without ox:** run `install/esx_items.sql`
-4. Add to `server.cfg` after your framework and inventory:
+4. Copy every PNG from `install/images/` into your inventory images folder:
+   - ox_inventory: `ox_inventory/web/images/`
+   - qb-inventory: `qb-inventory/html/images/`
+5. Add to `server.cfg` after your framework, inventory, and stream resources:
 
 ```
+ensure your-crown-stream-resource
+ensure your-halo-stream-resource
 ensure djfivem-headcosmetics
 ```
 
-5. Restart the server (or `ensure ox_inventory` then `ensure djfivem-headcosmetics` if you only added items).
+6. Restart the server (or `ensure ox_inventory` then `ensure djfivem-headcosmetics` if you only added items).
 
 Give yourself a test item:
 
@@ -51,9 +56,9 @@ Editor keys: arrow keys move X/Y, Page Up/Down move Z, numpad 4/6/8/5/7/9 rotate
 
 ## Adding another cosmetic
 
-1. Drop the `.ydr` into `stream/` and make sure the matching `.ytyp` includes it.
+1. Stream the new `.ydr` from your props resource (and include it in that resource's `.ytyp`).
 2. Add a row to `Config.Toys` in `config.lua` (copy a crown or halo and change the name/model).
-3. Add the matching inventory item from the install snippets.
+3. Add the matching inventory item and a PNG named `<item>.png`.
 
 ## Frameworks
 
