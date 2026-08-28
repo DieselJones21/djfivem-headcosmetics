@@ -1,0 +1,37 @@
+-- ESX items (oxmysql example). Run once, or add through your item SQL workflow.
+-- If you use ox_inventory on ESX, use ox_inventory_items.lua instead.
+
+INSERT INTO `items` (`name`, `label`, `weight`, `rare`, `can_remove`) VALUES
+    ('black_blue_crown', 'Black Blue Crown', 1, 0, 1),
+    ('black_cyan_crown', 'Black Cyan Crown', 1, 0, 1),
+    ('black_gold_crown', 'Black Gold Crown', 1, 0, 1),
+    ('black_green_crown', 'Black Green Crown', 1, 0, 1),
+    ('black_pink_crown', 'Black Pink Crown', 1, 0, 1),
+    ('black_purple_crown', 'Black Purple Crown', 1, 0, 1),
+    ('black_red_crown', 'Black Red Crown', 1, 0, 1),
+    ('black_white_crown', 'Black White Crown', 1, 0, 1),
+    ('black_yellow_crown', 'Black Yellow Crown', 1, 0, 1),
+    ('gold_blue_crown', 'Gold Blue Crown', 1, 0, 1),
+    ('gold_cyan_crown', 'Gold Cyan Crown', 1, 0, 1),
+    ('gold_green_crown', 'Gold Green Crown', 1, 0, 1),
+    ('gold_pink_crown', 'Gold Pink Crown', 1, 0, 1),
+    ('gold_purple_crown', 'Gold Purple Crown', 1, 0, 1),
+    ('gold_red_crown', 'Gold Red Crown', 1, 0, 1),
+    ('gold_white_crown', 'Gold White Crown', 1, 0, 1),
+    ('silver_blue_crown', 'Silver Blue Crown', 1, 0, 1),
+    ('silver_cyan_crown', 'Silver Cyan Crown', 1, 0, 1),
+    ('silver_gold_crown', 'Silver Gold Crown', 1, 0, 1),
+    ('silver_green_crown', 'Silver Green Crown', 1, 0, 1),
+    ('silver_pink_crown', 'Silver Pink Crown', 1, 0, 1),
+    ('silver_purple_crown', 'Silver Purple Crown', 1, 0, 1),
+    ('silver_red_crown', 'Silver Red Crown', 1, 0, 1),
+    ('silver_yellow_crown', 'Silver Yellow Crown', 1, 0, 1),
+    ('halo_black', 'Halo Black', 1, 0, 1),
+    ('halo_blue', 'Halo Blue', 1, 0, 1),
+    ('halo_gold', 'Halo Gold', 1, 0, 1),
+    ('halo_green', 'Halo Green', 1, 0, 1),
+    ('halo_pink', 'Halo Pink', 1, 0, 1),
+    ('halo_purple', 'Halo Purple', 1, 0, 1),
+    ('halo_red', 'Halo Red', 1, 0, 1),
+    ('halo_white', 'Halo White', 1, 0, 1);
+
