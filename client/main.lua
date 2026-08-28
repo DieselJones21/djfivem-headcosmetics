@@ -1,5 +1,6 @@
 local spawned = {} -- [serverId] = { [itemName] = entity }
 local lastPed = {} -- [serverId] = ped handle
+local playingAnim = {} -- [serverId] = { dict = string, name = string }
 
 local function notify(msg, nType)
     if not Config.Notify then return end
@@ -53,12 +54,14 @@ end
 
 local function clearPlayer(serverId)
     local props = spawned[serverId]
-    if not props then return end
-    for _, entity in pairs(props) do
-        deleteProp(entity)
+    if props then
+        for _, entity in pairs(props) do
+            deleteProp(entity)
+        end
     end
     spawned[serverId] = nil
     lastPed[serverId] = nil
+    playingAnim[serverId] = nil
 end
 
 local function attachOne(ped, name)
@@ -91,6 +94,50 @@ local function attachOne(ped, name)
     )
     SetModelAsNoLongerNeeded(hash)
     return obj
+end
+
+local function loadAnimDict(dict)
+    if not dict or dict == '' then return false end
+    if HasAnimDictLoaded(dict) then return true end
+    RequestAnimDict(dict)
+    local timeout = GetGameTimer() + 3000
+    while not HasAnimDictLoaded(dict) do
+        if GetGameTimer() > timeout then return false end
+        Wait(10)
+    end
+    return true
+end
+
+local function stopPlushAnim(ped, serverId)
+    local rec = playingAnim[serverId]
+    if rec and ped ~= 0 and DoesEntityExist(ped) then
+        StopAnimTask(ped, rec.dict, rec.name, 1.0)
+    end
+    playingAnim[serverId] = nil
+end
+
+local function syncAnim(ped, serverId, want)
+    local chosen
+    for name in pairs(want) do
+        local data = Config.Toys[name]
+        if data and data.animDict and data.animDict ~= '' and data.animName and data.animName ~= '' then
+            chosen = data
+            break
+        end
+    end
+
+    if not chosen then
+        if playingAnim[serverId] then
+            stopPlushAnim(ped, serverId)
+        end
+        return
+    end
+
+    if not loadAnimDict(chosen.animDict) then return end
+    if not IsEntityPlayingAnim(ped, chosen.animDict, chosen.animName, 3) then
+        TaskPlayAnim(ped, chosen.animDict, chosen.animName, 8.0, -8.0, -1, 49, 0.0, false, false, false)
+    end
+    playingAnim[serverId] = { dict = chosen.animDict, name = chosen.animName }
 end
 
 local function listToSet(list)
@@ -143,6 +190,8 @@ local function syncPlayer(serverId, list)
             end
         end
     end
+
+    syncAnim(ped, serverId, want)
 end
 
 AddStateBagChangeHandler(Config.StateBag, nil, function(bagName, _key, value)
