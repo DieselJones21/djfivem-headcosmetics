@@ -4,12 +4,12 @@ lua54 'yes'
 
 name 'djfivem-headcosmetics'
 author 'DieselJones'
-description 'Wear crowns, halos, and hug plushies from inventory items'
-version '1.1.0'
+description 'Wear crowns, halos, wings, shoulder pets, and plushies from inventory items'
+version '1.2.0'
 
 shared_scripts {
     'config.lua',
-    'shared/plushes.lua',
+    'shared/props.lua',
 }
 
 client_scripts {

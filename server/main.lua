@@ -493,6 +493,6 @@ if Config.DebugCommands then
         restoreDone[src] = true
         sessionRemoved[src] = nil
         pushState(src)
-        notify(src, 'Cleared head cosmetics', 'inform')
+        notify(src, 'Cleared cosmetics', 'inform')
     end, false)
 end

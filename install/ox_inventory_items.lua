@@ -282,6 +282,16 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
+    ['halo_orange'] = {
+        label = 'Halo Orange',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
     ['halo_pink'] = {
         label = 'Halo Pink',
         weight = 50,
@@ -322,8 +332,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['greenalien_plushie'] = {
-        label = 'Green Alien Plushie',
+    ['angelwings_black'] = {
+        label = 'Black Angel Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -332,8 +342,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['angelalien_plushie'] = {
-        label = 'Angel Alien Plushie',
+    ['angelwings_blue'] = {
+        label = 'Blue Angel Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -342,8 +352,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['bunalien_plushie'] = {
-        label = 'Bun Alien Plushie',
+    ['angelwings_green'] = {
+        label = 'Green Angel Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -352,8 +362,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['cosmicalien_plushie'] = {
-        label = 'Cosmic Alien Plushie',
+    ['angelwings_grey'] = {
+        label = 'Grey Angel Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -362,8 +372,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['lavaalien_plushie'] = {
-        label = 'Lava Alien Plushie',
+    ['angelwings_orange'] = {
+        label = 'Orange Angel Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -372,8 +382,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['marsalien_plushie'] = {
-        label = 'Mars Alien Plushie',
+    ['angelwings_pink'] = {
+        label = 'Pink Angel Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -382,8 +392,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['octoalien_plushie'] = {
-        label = 'Octo Alien Plushie',
+    ['angelwings_purple'] = {
+        label = 'Purple Angel Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -392,8 +402,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['voidalien_plushie'] = {
-        label = 'Void Alien Plushie',
+    ['angelwings_red'] = {
+        label = 'Red Angel Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -402,8 +412,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['chococow_plushie'] = {
-        label = 'Choco Cow Plushie',
+    ['angelwings_tan'] = {
+        label = 'Tan Angel Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -412,8 +422,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['galaxycow_plushie'] = {
-        label = 'Galaxy Cow Plushie',
+    ['angelwings_white'] = {
+        label = 'White Angel Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -422,8 +432,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['matchacow_plushie'] = {
-        label = 'Matcha Cow Plushie',
+    ['angelwings_yellow'] = {
+        label = 'Yellow Angel Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -432,8 +442,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['raincow_plushie'] = {
-        label = 'Rain Cow Plushie',
+    ['bluemorpho_aura'] = {
+        label = 'Blue Morpho Aura',
         weight = 50,
         stack = false,
         close = true,
@@ -442,8 +452,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['sakuracow_plushie'] = {
-        label = 'Sakura Cow Plushie',
+    ['bluewings'] = {
+        label = 'Blue Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -452,8 +462,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['sunflowercow_plushie'] = {
-        label = 'Sunflower Cow Plushie',
+    ['greenmorpho_aura'] = {
+        label = 'Green Morpho Aura',
         weight = 50,
         stack = false,
         close = true,
@@ -462,8 +472,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['highlandcow_plushie'] = {
-        label = 'Highland Cow Plushie',
+    ['greenwings'] = {
+        label = 'Green Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -472,8 +482,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['angelduck_plushie'] = {
-        label = 'Angel Duck Plushie',
+    ['lavendermorpho_aura'] = {
+        label = 'Lavender Morpho Aura',
         weight = 50,
         stack = false,
         close = true,
@@ -482,8 +492,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['devilduck_plushie'] = {
-        label = 'Devil Duck Plushie',
+    ['monochromemorpho_aura'] = {
+        label = 'Monochrome Morpho Aura',
         weight = 50,
         stack = false,
         close = true,
@@ -492,8 +502,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['gamerduck_plushie'] = {
-        label = 'Gamer Duck Plushie',
+    ['orangewings'] = {
+        label = 'Orange Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -502,8 +512,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['gardenerduck_plushie'] = {
-        label = 'Gardener Duck Plushie',
+    ['pinkmorpho_aura'] = {
+        label = 'Pink Morpho Aura',
         weight = 50,
         stack = false,
         close = true,
@@ -512,8 +522,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['gothduck_plushie'] = {
-        label = 'Goth Duck Plushie',
+    ['pinkwings'] = {
+        label = 'Pink Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -522,8 +532,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['sleepyduck_plushie'] = {
-        label = 'Sleepy Duck Plushie',
+    ['purplewings'] = {
+        label = 'Purple Wings',
         weight = 50,
         stack = false,
         close = true,
@@ -532,8 +542,1058 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['thugduck_plushie'] = {
-        label = 'Thug Duck Plushie',
+    ['redwings'] = {
+        label = 'Red Wings',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['whitewings'] = {
+        label = 'White Wings',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['yellowwings'] = {
+        label = 'Yellow Wings',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['alientoy'] = {
+        label = 'Alien Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['armored_cat'] = {
+        label = 'Armored Cat',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['autumndragon_toy'] = {
+        label = 'Autumn Dragon Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['avocadotoy'] = {
+        label = 'Avocado Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['babydragon2_by_joao'] = {
+        label = 'Baby Dragon 2',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['babydragon3_by_joao'] = {
+        label = 'Baby Dragon 3',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['babydragon4_by_joao'] = {
+        label = 'Baby Dragon 4',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['babydragon5_by_joao'] = {
+        label = 'Baby Dragon 5',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['babydragon6_by_joao'] = {
+        label = 'Baby Dragon 6',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['babydragon_by_joao'] = {
+        label = 'Baby Dragon',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['banditboa_toy'] = {
+        label = 'Bandit Boa Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bearballoontoy'] = {
+        label = 'Bear Balloon Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['black_ghost'] = {
+        label = 'Black Ghost',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['blackcattoy'] = {
+        label = 'Black Cat Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['blackrabbittoy'] = {
+        label = 'Black Rabbit Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['blackshibatoy'] = {
+        label = 'Black Shiba Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['blossom'] = {
+        label = 'Blossom',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bluefoxtoy'] = {
+        label = 'Blue Fox Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bluemushroomtoy'] = {
+        label = 'Blue Mushroom Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['brownchickentoy'] = {
+        label = 'Brown Chicken Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['brownowltoy'] = {
+        label = 'Brown Owl Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['brownrabbittoy'] = {
+        label = 'Brown Rabbit Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bubbles'] = {
+        label = 'Bubbles',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bumblebeetoy'] = {
+        label = 'Bumblebee Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['buttercup'] = {
+        label = 'Buttercup',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['cactustoy'] = {
+        label = 'Cactus Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['clovercat_toy'] = {
+        label = 'Clover Cat Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['coraldragon_toy'] = {
+        label = 'Coral Dragon Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['cuteghost_toy'] = {
+        label = 'Cute Ghost Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['dancingduck_toy'] = {
+        label = 'Dancing Duck Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['darkphoenix_toy'] = {
+        label = 'Dark Phoenix Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['dino'] = {
+        label = 'Dino',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['dino_student'] = {
+        label = 'Student Dino',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['edgemonkey_toy'] = {
+        label = 'Edge Monkey',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['fiestadoggo_toy'] = {
+        label = 'Fiesta Doggo',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['firekitsune_toy'] = {
+        label = 'Fire Kitsune',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['fox'] = {
+        label = 'Fox',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['frogtoy'] = {
+        label = 'Frog Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['gerbiltoy'] = {
+        label = 'Gerbil Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['ghosttoy'] = {
+        label = 'Ghost Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['glen_toy'] = {
+        label = 'Glen',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['graffitibear_toy'] = {
+        label = 'Graffiti Bear Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['greenfrogtoy'] = {
+        label = 'Green Frog Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['heartbreakimp_toy'] = {
+        label = 'Heartbreak Imp',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['holidaybeartoy'] = {
+        label = 'Holiday Bear Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['holidaycockatieltoy'] = {
+        label = 'Holiday Cockatiel',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['hollow_knight'] = {
+        label = 'Hollow Knight',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['icepup_toy'] = {
+        label = 'Ice Pup Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['jellycloud_toy'] = {
+        label = 'Jelly Cloud Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['knight_cat'] = {
+        label = 'Knight Cat',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['labtoy'] = {
+        label = 'Lab Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['magicdovetoy'] = {
+        label = 'Magic Dove',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['mickey_mouse'] = {
+        label = 'Mickey Mouse',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['mintaxolotltoy'] = {
+        label = 'Mint Axolotl Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['monkey_punk'] = {
+        label = 'Monkey Punk',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['monky'] = {
+        label = 'Monky',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['noctibat_animation'] = {
+        label = 'Noctibat',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['orangecattoy'] = {
+        label = 'Orange Cat Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['owltoy'] = {
+        label = 'Owl Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['periwinkleaxolotltoy'] = {
+        label = 'Periwinkle Axolotl',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['pig_angel'] = {
+        label = 'Pig Angel',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['pinkaxolotltoy'] = {
+        label = 'Pink Axolotl Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['pinkfoxtoy'] = {
+        label = 'Pink Fox Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['pinkfrogtoy'] = {
+        label = 'Pink Frog Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['pinkkoalatoy'] = {
+        label = 'Pink Koala Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['pinkpandatoy'] = {
+        label = 'Pink Panda Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['pinkrabbittoy'] = {
+        label = 'Pink Rabbit Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['purplefoxtoy'] = {
+        label = 'Purple Fox Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['purplemushroomtoy'] = {
+        label = 'Purple Mushroom Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['questing_mouse'] = {
+        label = 'Questing Mouse',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['raccoontoy'] = {
+        label = 'Raccoon Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['rainbowaxolotltoy'] = {
+        label = 'Rainbow Axolotl Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['rainbowtoy'] = {
+        label = 'Rainbow Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['raventoy'] = {
+        label = 'Raven Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['raveshibatoy'] = {
+        label = 'Rave Shiba Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['reapertoy'] = {
+        label = 'Reaper Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['redfoxtoy'] = {
+        label = 'Red Fox Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['redmushroomtoy'] = {
+        label = 'Red Mushroom Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['redpandatoy'] = {
+        label = 'Red Panda Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['rosemoth_toy'] = {
+        label = 'Rose Moth Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['sagerabbittoy'] = {
+        label = 'Sage Rabbit Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['sakurashibatoy'] = {
+        label = 'Sakura Shiba Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['scarecrow_toy'] = {
+        label = 'Scarecrow Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['shark_boi'] = {
+        label = 'Shark Boi',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['shibatoy'] = {
+        label = 'Shiba Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['shoulderguardianstoy'] = {
+        label = 'Shoulder Guardians',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['skelebuddyred'] = {
+        label = 'Red Skelebuddy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['skeletonunicorntoy'] = {
+        label = 'Skeleton Unicorn Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['snowleopard_toy'] = {
+        label = 'Snow Leopard Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['snowmantoy'] = {
+        label = 'Snowman Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['springbunny_toy'] = {
+        label = 'Spring Bunny Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['strawberrykit_toy'] = {
+        label = 'Strawberry Kit Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['sunflowerpanda_toy'] = {
+        label = 'Sunflower Panda Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['tacocattoy'] = {
+        label = 'Taco Cat Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['turkey_toy'] = {
+        label = 'Turkey Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['unicorntoy'] = {
+        label = 'Unicorn Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['voodoodoll_toy'] = {
+        label = 'Voodoo Doll Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['white_ghost'] = {
+        label = 'White Ghost',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['whitecattoy'] = {
+        label = 'White Cat Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['whitechickentoy'] = {
+        label = 'White Chicken Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['whiterabbittoy'] = {
+        label = 'White Rabbit Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['winterfoxtoy'] = {
+        label = 'Winter Fox Toy',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['yellowaxolotltoy'] = {
+        label = 'Yellow Axolotl Toy',
         weight = 50,
         stack = false,
         close = true,
@@ -552,68 +1612,28 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
+    ['angelalien_plushie'] = {
+        label = 'Angel Alien Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['angelduck_plushie'] = {
+        label = 'Angel Duck Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
     ['banana_01_plushie_shop'] = {
         label = 'Banana 01 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['bear_01_plushie_shop'] = {
-        label = 'Bear 01 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['bear_02_plushie_shop'] = {
-        label = 'Bear 02 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['bear_03_plushie_shop'] = {
-        label = 'Bear 03 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['bear_04_plushie_shop'] = {
-        label = 'Bear 04 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['bear_05_plushie_shop'] = {
-        label = 'Bear 05 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['bear_06_plushie_shop'] = {
-        label = 'Bear 06 Plushie',
         weight = 50,
         stack = false,
         close = true,
@@ -684,6 +1704,76 @@
     },
     ['bear8_01_plushie_shop'] = {
         label = 'Bear8 01 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bear_01_plushie_shop'] = {
+        label = 'Bear 01 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bear_02_plushie_shop'] = {
+        label = 'Bear 02 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bear_03_plushie_shop'] = {
+        label = 'Bear 03 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bear_04_plushie_shop'] = {
+        label = 'Bear 04 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bear_05_plushie_shop'] = {
+        label = 'Bear 05 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bear_06_plushie_shop'] = {
+        label = 'Bear 06 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['bunalien_plushie'] = {
+        label = 'Bun Alien Plushie',
         weight = 50,
         stack = false,
         close = true,
@@ -1112,8 +2202,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['coelho_plushie_shop'] = {
-        label = 'Rabbit Plushie',
+    ['chococow_plushie'] = {
+        label = 'Choco Cow Plushie',
         weight = 50,
         stack = false,
         close = true,
@@ -1124,6 +2214,36 @@
     },
     ['coelho2_plushie_shop'] = {
         label = 'Coelho2 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['coelho_plushie_shop'] = {
+        label = 'Rabbit Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['cosmicalien_plushie'] = {
+        label = 'Cosmic Alien Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['devilduck_plushie'] = {
+        label = 'Devil Duck Plushie',
         weight = 50,
         stack = false,
         close = true,
@@ -1322,16 +2442,6 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['frog_01_plushie_shop'] = {
-        label = 'Frog 01 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
     ['frog2_01_plushie_shop'] = {
         label = 'Frog2 01 Plushie',
         weight = 50,
@@ -1394,6 +2504,46 @@
     },
     ['frog2_07_plushie_shop'] = {
         label = 'Frog2 07 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['frog_01_plushie_shop'] = {
+        label = 'Frog 01 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['galaxycow_plushie'] = {
+        label = 'Galaxy Cow Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['gamerduck_plushie'] = {
+        label = 'Gamer Duck Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['gardenerduck_plushie'] = {
+        label = 'Gardener Duck Plushie',
         weight = 50,
         stack = false,
         close = true,
@@ -1482,6 +2632,36 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
+    ['gothduck_plushie'] = {
+        label = 'Goth Duck Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['greenalien_plushie'] = {
+        label = 'Green Alien Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['highlandcow_plushie'] = {
+        label = 'Highland Cow Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
     ['jacare_plushie_shop'] = {
         label = 'Alligator Plushie',
         weight = 50,
@@ -1492,68 +2672,38 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
+    ['lavaalien_plushie'] = {
+        label = 'Lava Alien Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['marsalien_plushie'] = {
+        label = 'Mars Alien Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['matchacow_plushie'] = {
+        label = 'Matcha Cow Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
     ['monk_01_plushie_shop'] = {
         label = 'Monkey 01 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['mouse_01_plushie_shop'] = {
-        label = 'Mouse 01 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['mouse_02_plushie_shop'] = {
-        label = 'Mouse 02 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['mouse_03_plushie_shop'] = {
-        label = 'Mouse 03 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['mouse_04_plushie_shop'] = {
-        label = 'Mouse 04 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['mouse_05_plushie_shop'] = {
-        label = 'Mouse 05 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
-    ['mouse_06_plushie_shop'] = {
-        label = 'Mouse 06 Plushie',
         weight = 50,
         stack = false,
         close = true,
@@ -1702,6 +2852,66 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
+    ['mouse_01_plushie_shop'] = {
+        label = 'Mouse 01 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['mouse_02_plushie_shop'] = {
+        label = 'Mouse 02 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['mouse_03_plushie_shop'] = {
+        label = 'Mouse 03 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['mouse_04_plushie_shop'] = {
+        label = 'Mouse 04 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['mouse_05_plushie_shop'] = {
+        label = 'Mouse 05 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['mouse_06_plushie_shop'] = {
+        label = 'Mouse 06 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
     ['mushroom_01_plushie_shop'] = {
         label = 'Mushroom 01 Plushie',
         weight = 50,
@@ -1772,6 +2982,16 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
+    ['octoalien_plushie'] = {
+        label = 'Octo Alien Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
     ['panda_plushie_shop'] = {
         label = 'Panda Plushie',
         weight = 50,
@@ -1792,16 +3012,6 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['pit_01_plushie_shop'] = {
-        label = 'Pitbull 01 Plushie',
-        weight = 50,
-        stack = false,
-        close = true,
-        consume = 0,
-        client = {
-            export = 'djfivem-headcosmetics.useCosmetic',
-        },
-    },
     ['pit2_01_plushie_shop'] = {
         label = 'Pit2 01 Plushie',
         weight = 50,
@@ -1814,6 +3024,16 @@
     },
     ['pit3_01_plushie_shop'] = {
         label = 'Pit3 01 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['pit_01_plushie_shop'] = {
+        label = 'Pitbull 01 Plushie',
         weight = 50,
         stack = false,
         close = true,
@@ -1912,8 +3132,8 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
-    ['rinoceronte_plushie_shop'] = {
-        label = 'Rhino Plushie',
+    ['raincow_plushie'] = {
+        label = 'Rain Cow Plushie',
         weight = 50,
         stack = false,
         close = true,
@@ -1944,6 +3164,56 @@
     },
     ['rinoceronte4_plushie_shop'] = {
         label = 'Rinoceronte4 Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['rinoceronte_plushie_shop'] = {
+        label = 'Rhino Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['sakuracow_plushie'] = {
+        label = 'Sakura Cow Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['sleepyduck_plushie'] = {
+        label = 'Sleepy Duck Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['sunflowercow_plushie'] = {
+        label = 'Sunflower Cow Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
+    ['thugduck_plushie'] = {
+        label = 'Thug Duck Plushie',
         weight = 50,
         stack = false,
         close = true,
@@ -2062,5 +3332,14 @@
             export = 'djfivem-headcosmetics.useCosmetic',
         },
     },
+    ['voidalien_plushie'] = {
+        label = 'Void Alien Plushie',
+        weight = 50,
+        stack = false,
+        close = true,
+        consume = 0,
+        client = {
+            export = 'djfivem-headcosmetics.useCosmetic',
+        },
+    },
 ]]
-
