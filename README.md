@@ -7,9 +7,9 @@ You do **not** need Renewed Weapon Carry. Keep the stream resource that contains
 ## What it does
 
 - Crowns and halos attach to `SKEL_Head` (bone `31086`) so they sit on hair and hats
-- Wings and morpho auras sit between the shoulders, just behind the shoulder blades (`SKEL_Spine3`, bone `24818`)
-- Shoulder pets attach on the right side of that same back bone
-- Red Skelebuddy wraps the right leg, centered on the knee (bone `16335`)
+- Wings and morpho auras use the tuned `yellowwings` pose on `SKEL_Spine3` (bone `24818`)
+- Shoulder pets use the tuned `shark_boi` pose on that same bone
+- Red Skelebuddy uses the tuned right-knee pose (bone `16335`)
 - Plushies hug against the chest (bone `24817`) with the `impexp_int-0` hold animation
 - One item per category at a time: crown, halo, wings, shoulder pet, leg wrap, and plushie can all be worn together
 - Wings, shoulder pets, plushies, and the leg wrap hide in vehicles and while dead

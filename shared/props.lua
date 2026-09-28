@@ -8,9 +8,9 @@ Config.Toys = Config.Toys or {}
     Starting poses:
       crown / halo  bone 31086  SKEL_Head
       plushie       bone 24817  SKEL_Spine3 hug + impexp hold anim
-      wings         bone 24818  between the shoulders (positive X moves up the spine)
-      shoulder      bone 24818  right-side shoulder pet
-      leg           bone 16335  MH_R_Knee, wraps the right leg
+      wings         bone 24818  tuned from /adjustcosmetic yellowwings
+      shoulder      bone 24818  tuned from /adjustcosmetic shark_boi
+      leg           bone 16335  tuned from /adjustcosmetic skelebuddyred
 
     Fine-tune any of them in game: /adjustcosmetic <item>
     Enter prints a Config.Toys line to F8.
@@ -53,139 +53,138 @@ Config.Toys['halo_purple'] = { model = 'halo_purple', bone = 31086, x = -0.6, y 
 Config.Toys['halo_red'] = { model = 'halo_red', bone = 31086, x = -0.6, y = 0.0, z = 0.0, xR = 90.0, yR = 0.0, zR = 90.0, category = 'halo', label = 'Halo Red' }
 Config.Toys['halo_white'] = { model = 'halo_white', bone = 31086, x = -0.6, y = 0.0, z = 0.0, xR = 90.0, yR = 0.0, zR = 90.0, category = 'halo', label = 'Halo White' }
 
--- Wings and morpho auras sit between the shoulders, just behind the shoulder blades.
--- On SKEL_Spine3, positive X moves up the spine and negative Y sits behind the body.
-Config.Toys['angelwings_black'] = { model = 'angelwings_black', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Black Angel Wings' }
-Config.Toys['angelwings_blue'] = { model = 'angelwings_blue', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Angel Wings' }
-Config.Toys['angelwings_green'] = { model = 'angelwings_green', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Angel Wings' }
-Config.Toys['angelwings_grey'] = { model = 'angelwings_grey', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Grey Angel Wings' }
-Config.Toys['angelwings_orange'] = { model = 'angelwings_orange', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Orange Angel Wings' }
-Config.Toys['angelwings_pink'] = { model = 'angelwings_pink', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Angel Wings' }
-Config.Toys['angelwings_purple'] = { model = 'angelwings_purple', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Purple Angel Wings' }
-Config.Toys['angelwings_red'] = { model = 'angelwings_red', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Red Angel Wings' }
-Config.Toys['angelwings_tan'] = { model = 'angelwings_tan', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Tan Angel Wings' }
-Config.Toys['angelwings_white'] = { model = 'angelwings_white', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'White Angel Wings' }
-Config.Toys['angelwings_yellow'] = { model = 'angelwings_yellow', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Yellow Angel Wings' }
-Config.Toys['bluemorpho_aura'] = { model = 'bluemorpho_aura', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Morpho Aura' }
-Config.Toys['bluewings'] = { model = 'bluewings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Wings' }
-Config.Toys['greenmorpho_aura'] = { model = 'greenmorpho_aura', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Morpho Aura' }
-Config.Toys['greenwings'] = { model = 'greenwings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Wings' }
-Config.Toys['lavendermorpho_aura'] = { model = 'lavendermorpho_aura', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Lavender Morpho Aura' }
-Config.Toys['monochromemorpho_aura'] = { model = 'monochromemorpho_aura', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Monochrome Morpho Aura' }
-Config.Toys['orangewings'] = { model = 'orangewings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Orange Wings' }
-Config.Toys['pinkmorpho_aura'] = { model = 'pinkmorpho_aura', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Morpho Aura' }
-Config.Toys['pinkwings'] = { model = 'pinkwings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Wings' }
-Config.Toys['purplewings'] = { model = 'purplewings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Purple Wings' }
-Config.Toys['redwings'] = { model = 'redwings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Red Wings' }
-Config.Toys['whitewings'] = { model = 'whitewings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'White Wings' }
-Config.Toys['yellowwings'] = { model = 'yellowwings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Yellow Wings' }
+-- Wings and morpho auras use the yellowwings pose from /adjustcosmetic.
+Config.Toys['angelwings_black'] = { model = 'angelwings_black', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Black Angel Wings' }
+Config.Toys['angelwings_blue'] = { model = 'angelwings_blue', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Angel Wings' }
+Config.Toys['angelwings_green'] = { model = 'angelwings_green', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Angel Wings' }
+Config.Toys['angelwings_grey'] = { model = 'angelwings_grey', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Grey Angel Wings' }
+Config.Toys['angelwings_orange'] = { model = 'angelwings_orange', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Orange Angel Wings' }
+Config.Toys['angelwings_pink'] = { model = 'angelwings_pink', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Angel Wings' }
+Config.Toys['angelwings_purple'] = { model = 'angelwings_purple', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Purple Angel Wings' }
+Config.Toys['angelwings_red'] = { model = 'angelwings_red', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Red Angel Wings' }
+Config.Toys['angelwings_tan'] = { model = 'angelwings_tan', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Tan Angel Wings' }
+Config.Toys['angelwings_white'] = { model = 'angelwings_white', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'White Angel Wings' }
+Config.Toys['angelwings_yellow'] = { model = 'angelwings_yellow', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Yellow Angel Wings' }
+Config.Toys['bluemorpho_aura'] = { model = 'bluemorpho_aura', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Morpho Aura' }
+Config.Toys['bluewings'] = { model = 'bluewings', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Wings' }
+Config.Toys['greenmorpho_aura'] = { model = 'greenmorpho_aura', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Morpho Aura' }
+Config.Toys['greenwings'] = { model = 'greenwings', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Wings' }
+Config.Toys['lavendermorpho_aura'] = { model = 'lavendermorpho_aura', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Lavender Morpho Aura' }
+Config.Toys['monochromemorpho_aura'] = { model = 'monochromemorpho_aura', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Monochrome Morpho Aura' }
+Config.Toys['orangewings'] = { model = 'orangewings', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Orange Wings' }
+Config.Toys['pinkmorpho_aura'] = { model = 'pinkmorpho_aura', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Morpho Aura' }
+Config.Toys['pinkwings'] = { model = 'pinkwings', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Wings' }
+Config.Toys['purplewings'] = { model = 'purplewings', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Purple Wings' }
+Config.Toys['redwings'] = { model = 'redwings', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Red Wings' }
+Config.Toys['whitewings'] = { model = 'whitewings', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'White Wings' }
+Config.Toys['yellowwings'] = { model = 'yellowwings', bone = 24818, x = 0.286, y = -0.072, z = 0.134, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Yellow Wings' }
 
--- Shoulder pets sit on the right side of SKEL_Spine3.
-Config.Toys['alientoy'] = { model = 'alientoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Alien Toy' }
-Config.Toys['armored_cat'] = { model = 'armored_cat', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Armored Cat' }
-Config.Toys['autumndragon_toy'] = { model = 'autumndragon_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Autumn Dragon Toy' }
-Config.Toys['avocadotoy'] = { model = 'avocadotoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Avocado Toy' }
-Config.Toys['babydragon2_by_joao'] = { model = 'babydragon2_by_joao', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon 2' }
-Config.Toys['babydragon3_by_joao'] = { model = 'babydragon3_by_joao', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon 3' }
-Config.Toys['babydragon4_by_joao'] = { model = 'babydragon4_by_joao', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon 4' }
-Config.Toys['babydragon5_by_joao'] = { model = 'babydragon5_by_joao', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon 5' }
-Config.Toys['babydragon6_by_joao'] = { model = 'babydragon6_by_joao', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon 6' }
-Config.Toys['babydragon_by_joao'] = { model = 'babydragon_by_joao', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon' }
-Config.Toys['banditboa_toy'] = { model = 'banditboa_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Bandit Boa Toy' }
-Config.Toys['bearballoontoy'] = { model = 'bearballoontoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Bear Balloon Toy' }
-Config.Toys['black_ghost'] = { model = 'black_ghost', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Black Ghost' }
-Config.Toys['blackcattoy'] = { model = 'blackcattoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Black Cat Toy' }
-Config.Toys['blackrabbittoy'] = { model = 'blackrabbittoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Black Rabbit Toy' }
-Config.Toys['blackshibatoy'] = { model = 'blackshibatoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Black Shiba Toy' }
-Config.Toys['blossom'] = { model = 'blossom', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Blossom' }
-Config.Toys['bluefoxtoy'] = { model = 'bluefoxtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Blue Fox Toy' }
-Config.Toys['bluemushroomtoy'] = { model = 'bluemushroomtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Blue Mushroom Toy' }
-Config.Toys['brownchickentoy'] = { model = 'brownchickentoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Brown Chicken Toy' }
-Config.Toys['brownowltoy'] = { model = 'brownowltoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Brown Owl Toy' }
-Config.Toys['brownrabbittoy'] = { model = 'brownrabbittoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Brown Rabbit Toy' }
-Config.Toys['bubbles'] = { model = 'bubbles', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Bubbles' }
-Config.Toys['bumblebeetoy'] = { model = 'bumblebeetoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Bumblebee Toy' }
-Config.Toys['buttercup'] = { model = 'buttercup', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Buttercup' }
-Config.Toys['cactustoy'] = { model = 'cactustoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Cactus Toy' }
-Config.Toys['clovercat_toy'] = { model = 'clovercat_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Clover Cat Toy' }
-Config.Toys['coraldragon_toy'] = { model = 'coraldragon_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Coral Dragon Toy' }
-Config.Toys['cuteghost_toy'] = { model = 'cuteghost_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Cute Ghost Toy' }
-Config.Toys['dancingduck_toy'] = { model = 'dancingduck_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Dancing Duck Toy' }
-Config.Toys['darkphoenix_toy'] = { model = 'darkphoenix_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Dark Phoenix Toy' }
-Config.Toys['dino'] = { model = 'dino', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Dino' }
-Config.Toys['dino_student'] = { model = 'dino_student', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Student Dino' }
-Config.Toys['edgemonkey_toy'] = { model = 'edgemonkey_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Edge Monkey' }
-Config.Toys['fiestadoggo_toy'] = { model = 'fiestadoggo_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Fiesta Doggo' }
-Config.Toys['firekitsune_toy'] = { model = 'firekitsune_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Fire Kitsune' }
-Config.Toys['fox'] = { model = 'fox', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Fox' }
-Config.Toys['frogtoy'] = { model = 'frogtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Frog Toy' }
-Config.Toys['gerbiltoy'] = { model = 'gerbiltoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Gerbil Toy' }
-Config.Toys['ghosttoy'] = { model = 'ghosttoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Ghost Toy' }
-Config.Toys['glen_toy'] = { model = 'glen_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Glen' }
-Config.Toys['graffitibear_toy'] = { model = 'graffitibear_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Graffiti Bear Toy' }
-Config.Toys['greenfrogtoy'] = { model = 'greenfrogtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Green Frog Toy' }
-Config.Toys['heartbreakimp_toy'] = { model = 'heartbreakimp_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Heartbreak Imp' }
-Config.Toys['holidaybeartoy'] = { model = 'holidaybeartoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Holiday Bear Toy' }
-Config.Toys['holidaycockatieltoy'] = { model = 'holidaycockatieltoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Holiday Cockatiel' }
-Config.Toys['hollow_knight'] = { model = 'hollow_knight', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Hollow Knight' }
-Config.Toys['icepup_toy'] = { model = 'icepup_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Ice Pup Toy' }
-Config.Toys['jellycloud_toy'] = { model = 'jellycloud_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Jelly Cloud Toy' }
-Config.Toys['knight_cat'] = { model = 'knight_cat', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Knight Cat' }
-Config.Toys['labtoy'] = { model = 'labtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Lab Toy' }
-Config.Toys['magicdovetoy'] = { model = 'magicdovetoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Magic Dove' }
-Config.Toys['mickey_mouse'] = { model = 'mickey_mouse', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Mickey Mouse' }
-Config.Toys['mintaxolotltoy'] = { model = 'mintaxolotltoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Mint Axolotl Toy' }
-Config.Toys['monkey_punk'] = { model = 'monkey_punk', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Monkey Punk' }
-Config.Toys['monky'] = { model = 'monky', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Monky' }
-Config.Toys['noctibat_animation'] = { model = 'noctibat_animation', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Noctibat' }
-Config.Toys['orangecattoy'] = { model = 'orangecattoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Orange Cat Toy' }
-Config.Toys['owltoy'] = { model = 'owltoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Owl Toy' }
-Config.Toys['periwinkleaxolotltoy'] = { model = 'periwinkleaxolotltoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Periwinkle Axolotl' }
-Config.Toys['pig_angel'] = { model = 'pig_angel', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pig Angel' }
-Config.Toys['pinkaxolotltoy'] = { model = 'pinkaxolotltoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Axolotl Toy' }
-Config.Toys['pinkfoxtoy'] = { model = 'pinkfoxtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Fox Toy' }
-Config.Toys['pinkfrogtoy'] = { model = 'pinkfrogtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Frog Toy' }
-Config.Toys['pinkkoalatoy'] = { model = 'pinkkoalatoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Koala Toy' }
-Config.Toys['pinkpandatoy'] = { model = 'pinkpandatoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Panda Toy' }
-Config.Toys['pinkrabbittoy'] = { model = 'pinkrabbittoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Rabbit Toy' }
-Config.Toys['purplefoxtoy'] = { model = 'purplefoxtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Purple Fox Toy' }
-Config.Toys['purplemushroomtoy'] = { model = 'purplemushroomtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Purple Mushroom Toy' }
-Config.Toys['questing_mouse'] = { model = 'questing_mouse', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Questing Mouse' }
-Config.Toys['raccoontoy'] = { model = 'raccoontoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Raccoon Toy' }
-Config.Toys['rainbowaxolotltoy'] = { model = 'rainbowaxolotltoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Rainbow Axolotl Toy' }
-Config.Toys['rainbowtoy'] = { model = 'rainbowtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Rainbow Toy' }
-Config.Toys['raventoy'] = { model = 'raventoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Raven Toy' }
-Config.Toys['raveshibatoy'] = { model = 'raveshibatoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Rave Shiba Toy' }
-Config.Toys['reapertoy'] = { model = 'reapertoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Reaper Toy' }
-Config.Toys['redfoxtoy'] = { model = 'redfoxtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Red Fox Toy' }
-Config.Toys['redmushroomtoy'] = { model = 'redmushroomtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Red Mushroom Toy' }
-Config.Toys['redpandatoy'] = { model = 'redpandatoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Red Panda Toy' }
-Config.Toys['rosemoth_toy'] = { model = 'rosemoth_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Rose Moth Toy' }
-Config.Toys['sagerabbittoy'] = { model = 'sagerabbittoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Sage Rabbit Toy' }
-Config.Toys['sakurashibatoy'] = { model = 'sakurashibatoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Sakura Shiba Toy' }
-Config.Toys['scarecrow_toy'] = { model = 'scarecrow_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Scarecrow Toy' }
-Config.Toys['shark_boi'] = { model = 'shark_boi', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Shark Boi' }
-Config.Toys['shibatoy'] = { model = 'shibatoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Shiba Toy' }
-Config.Toys['shoulderguardianstoy'] = { model = 'shoulderguardianstoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Shoulder Guardians' }
-Config.Toys['skeletonunicorntoy'] = { model = 'skeletonunicorntoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Skeleton Unicorn Toy' }
-Config.Toys['snowleopard_toy'] = { model = 'snowleopard_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Snow Leopard Toy' }
-Config.Toys['snowmantoy'] = { model = 'snowmantoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Snowman Toy' }
-Config.Toys['springbunny_toy'] = { model = 'springbunny_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Spring Bunny Toy' }
-Config.Toys['strawberrykit_toy'] = { model = 'strawberrykit_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Strawberry Kit Toy' }
-Config.Toys['sunflowerpanda_toy'] = { model = 'sunflowerpanda_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Sunflower Panda Toy' }
-Config.Toys['tacocattoy'] = { model = 'tacocattoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Taco Cat Toy' }
-Config.Toys['turkey_toy'] = { model = 'turkey_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Turkey Toy' }
-Config.Toys['unicorntoy'] = { model = 'unicorntoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Unicorn Toy' }
-Config.Toys['voodoodoll_toy'] = { model = 'voodoodoll_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Voodoo Doll Toy' }
-Config.Toys['white_ghost'] = { model = 'white_ghost', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'White Ghost' }
-Config.Toys['whitecattoy'] = { model = 'whitecattoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'White Cat Toy' }
-Config.Toys['whitechickentoy'] = { model = 'whitechickentoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'White Chicken Toy' }
-Config.Toys['whiterabbittoy'] = { model = 'whiterabbittoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'White Rabbit Toy' }
-Config.Toys['winterfoxtoy'] = { model = 'winterfoxtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Winter Fox Toy' }
-Config.Toys['yellowaxolotltoy'] = { model = 'yellowaxolotltoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Yellow Axolotl Toy' }
+-- Shoulder pets use the shark_boi pose from /adjustcosmetic.
+Config.Toys['alientoy'] = { model = 'alientoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Alien Toy' }
+Config.Toys['armored_cat'] = { model = 'armored_cat', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Armored Cat' }
+Config.Toys['autumndragon_toy'] = { model = 'autumndragon_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Autumn Dragon Toy' }
+Config.Toys['avocadotoy'] = { model = 'avocadotoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Avocado Toy' }
+Config.Toys['babydragon2_by_joao'] = { model = 'babydragon2_by_joao', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon 2' }
+Config.Toys['babydragon3_by_joao'] = { model = 'babydragon3_by_joao', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon 3' }
+Config.Toys['babydragon4_by_joao'] = { model = 'babydragon4_by_joao', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon 4' }
+Config.Toys['babydragon5_by_joao'] = { model = 'babydragon5_by_joao', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon 5' }
+Config.Toys['babydragon6_by_joao'] = { model = 'babydragon6_by_joao', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon 6' }
+Config.Toys['babydragon_by_joao'] = { model = 'babydragon_by_joao', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Baby Dragon' }
+Config.Toys['banditboa_toy'] = { model = 'banditboa_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Bandit Boa Toy' }
+Config.Toys['bearballoontoy'] = { model = 'bearballoontoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Bear Balloon Toy' }
+Config.Toys['black_ghost'] = { model = 'black_ghost', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Black Ghost' }
+Config.Toys['blackcattoy'] = { model = 'blackcattoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Black Cat Toy' }
+Config.Toys['blackrabbittoy'] = { model = 'blackrabbittoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Black Rabbit Toy' }
+Config.Toys['blackshibatoy'] = { model = 'blackshibatoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Black Shiba Toy' }
+Config.Toys['blossom'] = { model = 'blossom', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Blossom' }
+Config.Toys['bluefoxtoy'] = { model = 'bluefoxtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Blue Fox Toy' }
+Config.Toys['bluemushroomtoy'] = { model = 'bluemushroomtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Blue Mushroom Toy' }
+Config.Toys['brownchickentoy'] = { model = 'brownchickentoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Brown Chicken Toy' }
+Config.Toys['brownowltoy'] = { model = 'brownowltoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Brown Owl Toy' }
+Config.Toys['brownrabbittoy'] = { model = 'brownrabbittoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Brown Rabbit Toy' }
+Config.Toys['bubbles'] = { model = 'bubbles', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Bubbles' }
+Config.Toys['bumblebeetoy'] = { model = 'bumblebeetoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Bumblebee Toy' }
+Config.Toys['buttercup'] = { model = 'buttercup', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Buttercup' }
+Config.Toys['cactustoy'] = { model = 'cactustoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Cactus Toy' }
+Config.Toys['clovercat_toy'] = { model = 'clovercat_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Clover Cat Toy' }
+Config.Toys['coraldragon_toy'] = { model = 'coraldragon_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Coral Dragon Toy' }
+Config.Toys['cuteghost_toy'] = { model = 'cuteghost_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Cute Ghost Toy' }
+Config.Toys['dancingduck_toy'] = { model = 'dancingduck_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Dancing Duck Toy' }
+Config.Toys['darkphoenix_toy'] = { model = 'darkphoenix_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Dark Phoenix Toy' }
+Config.Toys['dino'] = { model = 'dino', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Dino' }
+Config.Toys['dino_student'] = { model = 'dino_student', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Student Dino' }
+Config.Toys['edgemonkey_toy'] = { model = 'edgemonkey_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Edge Monkey' }
+Config.Toys['fiestadoggo_toy'] = { model = 'fiestadoggo_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Fiesta Doggo' }
+Config.Toys['firekitsune_toy'] = { model = 'firekitsune_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Fire Kitsune' }
+Config.Toys['fox'] = { model = 'fox', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Fox' }
+Config.Toys['frogtoy'] = { model = 'frogtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Frog Toy' }
+Config.Toys['gerbiltoy'] = { model = 'gerbiltoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Gerbil Toy' }
+Config.Toys['ghosttoy'] = { model = 'ghosttoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Ghost Toy' }
+Config.Toys['glen_toy'] = { model = 'glen_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Glen' }
+Config.Toys['graffitibear_toy'] = { model = 'graffitibear_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Graffiti Bear Toy' }
+Config.Toys['greenfrogtoy'] = { model = 'greenfrogtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Green Frog Toy' }
+Config.Toys['heartbreakimp_toy'] = { model = 'heartbreakimp_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Heartbreak Imp' }
+Config.Toys['holidaybeartoy'] = { model = 'holidaybeartoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Holiday Bear Toy' }
+Config.Toys['holidaycockatieltoy'] = { model = 'holidaycockatieltoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Holiday Cockatiel' }
+Config.Toys['hollow_knight'] = { model = 'hollow_knight', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Hollow Knight' }
+Config.Toys['icepup_toy'] = { model = 'icepup_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Ice Pup Toy' }
+Config.Toys['jellycloud_toy'] = { model = 'jellycloud_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Jelly Cloud Toy' }
+Config.Toys['knight_cat'] = { model = 'knight_cat', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Knight Cat' }
+Config.Toys['labtoy'] = { model = 'labtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Lab Toy' }
+Config.Toys['magicdovetoy'] = { model = 'magicdovetoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Magic Dove' }
+Config.Toys['mickey_mouse'] = { model = 'mickey_mouse', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Mickey Mouse' }
+Config.Toys['mintaxolotltoy'] = { model = 'mintaxolotltoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Mint Axolotl Toy' }
+Config.Toys['monkey_punk'] = { model = 'monkey_punk', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Monkey Punk' }
+Config.Toys['monky'] = { model = 'monky', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Monky' }
+Config.Toys['noctibat_animation'] = { model = 'noctibat_animation', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Noctibat' }
+Config.Toys['orangecattoy'] = { model = 'orangecattoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Orange Cat Toy' }
+Config.Toys['owltoy'] = { model = 'owltoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Owl Toy' }
+Config.Toys['periwinkleaxolotltoy'] = { model = 'periwinkleaxolotltoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Periwinkle Axolotl' }
+Config.Toys['pig_angel'] = { model = 'pig_angel', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pig Angel' }
+Config.Toys['pinkaxolotltoy'] = { model = 'pinkaxolotltoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Axolotl Toy' }
+Config.Toys['pinkfoxtoy'] = { model = 'pinkfoxtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Fox Toy' }
+Config.Toys['pinkfrogtoy'] = { model = 'pinkfrogtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Frog Toy' }
+Config.Toys['pinkkoalatoy'] = { model = 'pinkkoalatoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Koala Toy' }
+Config.Toys['pinkpandatoy'] = { model = 'pinkpandatoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Panda Toy' }
+Config.Toys['pinkrabbittoy'] = { model = 'pinkrabbittoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Pink Rabbit Toy' }
+Config.Toys['purplefoxtoy'] = { model = 'purplefoxtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Purple Fox Toy' }
+Config.Toys['purplemushroomtoy'] = { model = 'purplemushroomtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Purple Mushroom Toy' }
+Config.Toys['questing_mouse'] = { model = 'questing_mouse', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Questing Mouse' }
+Config.Toys['raccoontoy'] = { model = 'raccoontoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Raccoon Toy' }
+Config.Toys['rainbowaxolotltoy'] = { model = 'rainbowaxolotltoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Rainbow Axolotl Toy' }
+Config.Toys['rainbowtoy'] = { model = 'rainbowtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Rainbow Toy' }
+Config.Toys['raventoy'] = { model = 'raventoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Raven Toy' }
+Config.Toys['raveshibatoy'] = { model = 'raveshibatoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Rave Shiba Toy' }
+Config.Toys['reapertoy'] = { model = 'reapertoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Reaper Toy' }
+Config.Toys['redfoxtoy'] = { model = 'redfoxtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Red Fox Toy' }
+Config.Toys['redmushroomtoy'] = { model = 'redmushroomtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Red Mushroom Toy' }
+Config.Toys['redpandatoy'] = { model = 'redpandatoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Red Panda Toy' }
+Config.Toys['rosemoth_toy'] = { model = 'rosemoth_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Rose Moth Toy' }
+Config.Toys['sagerabbittoy'] = { model = 'sagerabbittoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Sage Rabbit Toy' }
+Config.Toys['sakurashibatoy'] = { model = 'sakurashibatoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Sakura Shiba Toy' }
+Config.Toys['scarecrow_toy'] = { model = 'scarecrow_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Scarecrow Toy' }
+Config.Toys['shark_boi'] = { model = 'shark_boi', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Shark Boi' }
+Config.Toys['shibatoy'] = { model = 'shibatoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Shiba Toy' }
+Config.Toys['shoulderguardianstoy'] = { model = 'shoulderguardianstoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Shoulder Guardians' }
+Config.Toys['skeletonunicorntoy'] = { model = 'skeletonunicorntoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Skeleton Unicorn Toy' }
+Config.Toys['snowleopard_toy'] = { model = 'snowleopard_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Snow Leopard Toy' }
+Config.Toys['snowmantoy'] = { model = 'snowmantoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Snowman Toy' }
+Config.Toys['springbunny_toy'] = { model = 'springbunny_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Spring Bunny Toy' }
+Config.Toys['strawberrykit_toy'] = { model = 'strawberrykit_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Strawberry Kit Toy' }
+Config.Toys['sunflowerpanda_toy'] = { model = 'sunflowerpanda_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Sunflower Panda Toy' }
+Config.Toys['tacocattoy'] = { model = 'tacocattoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Taco Cat Toy' }
+Config.Toys['turkey_toy'] = { model = 'turkey_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Turkey Toy' }
+Config.Toys['unicorntoy'] = { model = 'unicorntoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Unicorn Toy' }
+Config.Toys['voodoodoll_toy'] = { model = 'voodoodoll_toy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Voodoo Doll Toy' }
+Config.Toys['white_ghost'] = { model = 'white_ghost', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'White Ghost' }
+Config.Toys['whitecattoy'] = { model = 'whitecattoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'White Cat Toy' }
+Config.Toys['whitechickentoy'] = { model = 'whitechickentoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'White Chicken Toy' }
+Config.Toys['whiterabbittoy'] = { model = 'whiterabbittoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'White Rabbit Toy' }
+Config.Toys['winterfoxtoy'] = { model = 'winterfoxtoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Winter Fox Toy' }
+Config.Toys['yellowaxolotltoy'] = { model = 'yellowaxolotltoy', bone = 24818, x = 0.323, y = 0.014, z = 0.168, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Yellow Axolotl Toy' }
 
--- Red Skelebuddy wraps the right leg, centered on the knee.
-Config.Toys['skelebuddyred'] = { model = 'skelebuddyred', bone = 16335, x = 0.0, y = 0.0, z = 0.0, xR = 0.0, yR = 0.0, zR = 0.0, category = 'leg', label = 'Red Skelebuddy' }
+-- Red Skelebuddy uses the tuned right-knee pose from /adjustcosmetic.
+Config.Toys['skelebuddyred'] = { model = 'skelebuddyred', bone = 16335, x = -0.572, y = 0.002, z = -0.104, xR = -3.0, yR = -89.0, zR = 174.0, category = 'leg', label = 'Red Skelebuddy' }
 
 -- Plushies use the hug pose on SKEL_Spine2 plus the hold animation.
 Config.Toys['abelha_plushie_shop'] = { model = 'abelha_plushie_shop', bone = 24817, x = 0.0, y = 0.4, z = -0.02, xR = 180.0, yR = -90.0, zR = 0.0, animDict = 'impexp_int-0', animName = 'mp_m_waremech_01_dual-0', category = 'plushie', label = 'Bee Plushie' }
