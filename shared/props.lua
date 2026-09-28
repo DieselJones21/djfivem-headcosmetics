@@ -8,7 +8,7 @@ Config.Toys = Config.Toys or {}
     Starting poses:
       crown / halo  bone 31086  SKEL_Head
       plushie       bone 24817  SKEL_Spine3 hug + impexp hold anim
-      wings         bone 24818  SKEL_Spine3 upper back
+      wings         bone 24818  between the shoulders (positive X moves up the spine)
       shoulder      bone 24818  right-side shoulder pet
       leg           bone 16335  MH_R_Knee, wraps the right leg
 
@@ -53,31 +53,32 @@ Config.Toys['halo_purple'] = { model = 'halo_purple', bone = 31086, x = -0.6, y 
 Config.Toys['halo_red'] = { model = 'halo_red', bone = 31086, x = -0.6, y = 0.0, z = 0.0, xR = 90.0, yR = 0.0, zR = 90.0, category = 'halo', label = 'Halo Red' }
 Config.Toys['halo_white'] = { model = 'halo_white', bone = 31086, x = -0.6, y = 0.0, z = 0.0, xR = 90.0, yR = 0.0, zR = 90.0, category = 'halo', label = 'Halo White' }
 
--- Wings and morpho auras sit on the upper back (SKEL_Spine3).
-Config.Toys['angelwings_black'] = { model = 'angelwings_black', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Black Angel Wings' }
-Config.Toys['angelwings_blue'] = { model = 'angelwings_blue', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Angel Wings' }
-Config.Toys['angelwings_green'] = { model = 'angelwings_green', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Angel Wings' }
-Config.Toys['angelwings_grey'] = { model = 'angelwings_grey', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Grey Angel Wings' }
-Config.Toys['angelwings_orange'] = { model = 'angelwings_orange', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Orange Angel Wings' }
-Config.Toys['angelwings_pink'] = { model = 'angelwings_pink', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Angel Wings' }
-Config.Toys['angelwings_purple'] = { model = 'angelwings_purple', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Purple Angel Wings' }
-Config.Toys['angelwings_red'] = { model = 'angelwings_red', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Red Angel Wings' }
-Config.Toys['angelwings_tan'] = { model = 'angelwings_tan', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Tan Angel Wings' }
-Config.Toys['angelwings_white'] = { model = 'angelwings_white', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'White Angel Wings' }
-Config.Toys['angelwings_yellow'] = { model = 'angelwings_yellow', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Yellow Angel Wings' }
-Config.Toys['bluemorpho_aura'] = { model = 'bluemorpho_aura', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Morpho Aura' }
-Config.Toys['bluewings'] = { model = 'bluewings', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Wings' }
-Config.Toys['greenmorpho_aura'] = { model = 'greenmorpho_aura', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Morpho Aura' }
-Config.Toys['greenwings'] = { model = 'greenwings', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Wings' }
-Config.Toys['lavendermorpho_aura'] = { model = 'lavendermorpho_aura', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Lavender Morpho Aura' }
-Config.Toys['monochromemorpho_aura'] = { model = 'monochromemorpho_aura', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Monochrome Morpho Aura' }
-Config.Toys['orangewings'] = { model = 'orangewings', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Orange Wings' }
-Config.Toys['pinkmorpho_aura'] = { model = 'pinkmorpho_aura', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Morpho Aura' }
-Config.Toys['pinkwings'] = { model = 'pinkwings', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Wings' }
-Config.Toys['purplewings'] = { model = 'purplewings', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Purple Wings' }
-Config.Toys['redwings'] = { model = 'redwings', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Red Wings' }
-Config.Toys['whitewings'] = { model = 'whitewings', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'White Wings' }
-Config.Toys['yellowwings'] = { model = 'yellowwings', bone = 24818, x = 0.0, y = -0.18, z = 0.02, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Yellow Wings' }
+-- Wings and morpho auras sit between the shoulders, just behind the shoulder blades.
+-- On SKEL_Spine3, positive X moves up the spine and negative Y sits behind the body.
+Config.Toys['angelwings_black'] = { model = 'angelwings_black', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Black Angel Wings' }
+Config.Toys['angelwings_blue'] = { model = 'angelwings_blue', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Angel Wings' }
+Config.Toys['angelwings_green'] = { model = 'angelwings_green', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Angel Wings' }
+Config.Toys['angelwings_grey'] = { model = 'angelwings_grey', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Grey Angel Wings' }
+Config.Toys['angelwings_orange'] = { model = 'angelwings_orange', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Orange Angel Wings' }
+Config.Toys['angelwings_pink'] = { model = 'angelwings_pink', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Angel Wings' }
+Config.Toys['angelwings_purple'] = { model = 'angelwings_purple', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Purple Angel Wings' }
+Config.Toys['angelwings_red'] = { model = 'angelwings_red', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Red Angel Wings' }
+Config.Toys['angelwings_tan'] = { model = 'angelwings_tan', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Tan Angel Wings' }
+Config.Toys['angelwings_white'] = { model = 'angelwings_white', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'White Angel Wings' }
+Config.Toys['angelwings_yellow'] = { model = 'angelwings_yellow', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Yellow Angel Wings' }
+Config.Toys['bluemorpho_aura'] = { model = 'bluemorpho_aura', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Morpho Aura' }
+Config.Toys['bluewings'] = { model = 'bluewings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Blue Wings' }
+Config.Toys['greenmorpho_aura'] = { model = 'greenmorpho_aura', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Morpho Aura' }
+Config.Toys['greenwings'] = { model = 'greenwings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Green Wings' }
+Config.Toys['lavendermorpho_aura'] = { model = 'lavendermorpho_aura', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Lavender Morpho Aura' }
+Config.Toys['monochromemorpho_aura'] = { model = 'monochromemorpho_aura', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Monochrome Morpho Aura' }
+Config.Toys['orangewings'] = { model = 'orangewings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Orange Wings' }
+Config.Toys['pinkmorpho_aura'] = { model = 'pinkmorpho_aura', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Morpho Aura' }
+Config.Toys['pinkwings'] = { model = 'pinkwings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Pink Wings' }
+Config.Toys['purplewings'] = { model = 'purplewings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Purple Wings' }
+Config.Toys['redwings'] = { model = 'redwings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Red Wings' }
+Config.Toys['whitewings'] = { model = 'whitewings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'White Wings' }
+Config.Toys['yellowwings'] = { model = 'yellowwings', bone = 24818, x = 0.28, y = -0.10, z = 0.0, xR = 0.0, yR = 90.0, zR = 180.0, category = 'wings', label = 'Yellow Wings' }
 
 -- Shoulder pets sit on the right side of SKEL_Spine3.
 Config.Toys['alientoy'] = { model = 'alientoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Alien Toy' }
