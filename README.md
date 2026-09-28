@@ -1,25 +1,32 @@
 # djfivem-headcosmetics
 
-Wear crowns and halos on the head, wings on the back, shoulder pets on the left shoulder, and hug handheld plushies — from normal inventory items.
+Wear crowns, halos, wings, shoulder pets, a right-leg wrap, and hug plushies from normal inventory items.
 
-You do **not** need Renewed Weapon Carry. Keep the **cosmetics** stream resource started — this script only attaches those models when the inventory item is used.
+You do **not** need Renewed Weapon Carry. Keep the stream resource that contains these models started — this script only attaches them when the inventory item is used.
 
 ## What it does
 
 - Crowns and halos attach to `SKEL_Head` (bone `31086`) so they sit on hair and hats
-- Wings attach to `SKEL_Spine3` (bone `24818`) on the upper back
-- Shoulder pets attach to `SKEL_L_Clavicle` (bone `64729`) on the player's left shoulder
+- Wings and morpho auras attach to the upper back (`SKEL_Spine3`, bone `24818`)
+- Shoulder pets attach on the right side of that same back bone
+- Red Skelebuddy wraps the right leg, centered on the knee (bone `16335`)
 - Plushies hug against the chest (bone `24817`) with the `impexp_int-0` hold animation
-- One item per category at a time (crown + halo + wings + shoulder pet + plushie + aura)
-- Wings, shoulder pets, plushies, and auras hide in vehicles
+- One item per category at a time: crown, halo, wings, shoulder pet, leg wrap, and plushie can all be worn together
+- Wings, shoulder pets, plushies, and the leg wrap hide in vehicles and while dead
 - Use the item to put it on, use it again to take it off (item is not consumed)
 
-Only the props listed in `shared/catalog.lua` can be equipped. Models are streamed from the `cosmetics` resource.
+Only the props listed in `shared/props.lua` can be equipped. The item name is the streamed model name.
 
 ## Install
 
 1. Keep the folder named `djfivem-headcosmetics` (ox_inventory export depends on this name).
-2. Start your `cosmetics` stream resource (do not copy the `.ydr` files into this resource).
+2. Start the resource that streams these models. Do not copy the `.ydr` files into this resource. If that resource is not named `cosmetics`, set `Config.StreamResource` in `config.lua` (or set it to `''` when several packs stream the models). Packs this list expects:
+   - crowns: `crown_props.ytyp`
+   - halos: `n93_halos.ytyp` (includes `halo_orange`)
+   - shop plushies: `pelucias_plushie_shop.ytyp`
+   - alien / cow / duck plush packs
+   - angel wings, color wings, and morpho auras
+   - shoulder pets and `skelebuddyred` (`shared/props.lua` is the full list)
 3. Add the inventory items:
    - **ox_inventory:** paste `install/ox_inventory_items.lua` into `ox_inventory/data/items.lua`
    - **qb-inventory:** paste `install/qb_items.lua` into `qb-core/shared/items.lua`
@@ -27,13 +34,14 @@ Only the props listed in `shared/catalog.lua` can be equipped. Models are stream
 4. Copy every PNG from `install/images/` into your inventory images folder:
    - ox_inventory: `ox_inventory/web/images/`
    - qb-inventory: `qb-inventory/html/images/`
-5. `ensure cosmetics` then `ensure djfivem-headcosmetics` after framework and inventory.
+5. `ensure` the stream resource, then `ensure djfivem-headcosmetics` after framework and inventory.
 
 ```
 /giveitem [id] black_blue_crown 1
 /giveitem [id] halo_gold 1
-/giveitem [id] angelwings_blue 1
-/giveitem [id] babydragon_by_joao 1
+/giveitem [id] bluewings 1
+/giveitem [id] shark_boi 1
+/giveitem [id] skelebuddyred 1
 /giveitem [id] bear_01_plushie_shop 1
 ```
 
@@ -42,13 +50,13 @@ Only the props listed in `shared/catalog.lua` can be equipped. Models are stream
 | Command | What it does |
 | --- | --- |
 | Use the inventory item | Toggle that cosmetic |
-| `/wearcosmetic bear_01_plushie_shop` | Same toggle (debug) |
+| `/wearcosmetic shark_boi` | Same toggle (debug) |
 | `/clearcosmetics` | Remove everything |
-| `/adjustcosmetic angelwings_blue` | Live placement editor |
+| `/adjustcosmetic shark_boi` | Live placement editor |
 
 Editor keys: arrow keys move X/Y, Page Up/Down move Z, numpad 4/6/8/5/7/9 rotate, Alt = fine, Shift = coarse, Enter prints a config line to F8, Backspace cancels.
 
-To move every wing or every shoulder pet at once, edit `Config.Presets` in `config.lua`.
+Wing, aura, and shoulder poses are starting points. If a model sits off the body, use `/adjustcosmetic` and paste the F8 line over that entry in `shared/props.lua`.
 
 ## Frameworks
 
