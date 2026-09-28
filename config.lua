@@ -14,6 +14,7 @@ Config.ReplaceSameCategory = {
     plushie = true,
     wings = true,
     shoulder = true,
+    leg = true,
 }
 
 Config.Persist = true

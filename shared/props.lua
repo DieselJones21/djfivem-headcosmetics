@@ -10,6 +10,7 @@ Config.Toys = Config.Toys or {}
       plushie       bone 24817  SKEL_Spine3 hug + impexp hold anim
       wings         bone 24818  SKEL_Spine3 upper back
       shoulder      bone 24818  right-side shoulder pet
+      leg           bone 16335  MH_R_Knee, wraps the right leg
 
     Fine-tune any of them in game: /adjustcosmetic <item>
     Enter prints a Config.Toys line to F8.
@@ -165,7 +166,6 @@ Config.Toys['scarecrow_toy'] = { model = 'scarecrow_toy', bone = 24818, x = 0.28
 Config.Toys['shark_boi'] = { model = 'shark_boi', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Shark Boi' }
 Config.Toys['shibatoy'] = { model = 'shibatoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Shiba Toy' }
 Config.Toys['shoulderguardianstoy'] = { model = 'shoulderguardianstoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Shoulder Guardians' }
-Config.Toys['skelebuddyred'] = { model = 'skelebuddyred', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Red Skelebuddy' }
 Config.Toys['skeletonunicorntoy'] = { model = 'skeletonunicorntoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Skeleton Unicorn Toy' }
 Config.Toys['snowleopard_toy'] = { model = 'snowleopard_toy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Snow Leopard Toy' }
 Config.Toys['snowmantoy'] = { model = 'snowmantoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Snowman Toy' }
@@ -183,7 +183,10 @@ Config.Toys['whiterabbittoy'] = { model = 'whiterabbittoy', bone = 24818, x = 0.
 Config.Toys['winterfoxtoy'] = { model = 'winterfoxtoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Winter Fox Toy' }
 Config.Toys['yellowaxolotltoy'] = { model = 'yellowaxolotltoy', bone = 24818, x = 0.285, y = 0.0, z = 0.15, xR = 18.0, yR = 76.0, zR = 184.0, category = 'shoulder', label = 'Yellow Axolotl Toy' }
 
--- Plushies use the hug pose on SKEL_Spine3 plus the hold animation.
+-- Red Skelebuddy wraps the right leg, centered on the knee.
+Config.Toys['skelebuddyred'] = { model = 'skelebuddyred', bone = 16335, x = 0.0, y = 0.0, z = 0.0, xR = 0.0, yR = 0.0, zR = 0.0, category = 'leg', label = 'Red Skelebuddy' }
+
+-- Plushies use the hug pose on SKEL_Spine2 plus the hold animation.
 Config.Toys['abelha_plushie_shop'] = { model = 'abelha_plushie_shop', bone = 24817, x = 0.0, y = 0.4, z = -0.02, xR = 180.0, yR = -90.0, zR = 0.0, animDict = 'impexp_int-0', animName = 'mp_m_waremech_01_dual-0', category = 'plushie', label = 'Bee Plushie' }
 Config.Toys['angelalien_plushie'] = { model = 'angelalien_plushie', bone = 24817, x = 0.0, y = 0.4, z = -0.02, xR = 180.0, yR = -90.0, zR = 0.0, animDict = 'impexp_int-0', animName = 'mp_m_waremech_01_dual-0', category = 'plushie', label = 'Angel Alien Plushie' }
 Config.Toys['angelduck_plushie'] = { model = 'angelduck_plushie', bone = 24817, x = 0.0, y = 0.4, z = -0.02, xR = 180.0, yR = -90.0, zR = 0.0, animDict = 'impexp_int-0', animName = 'mp_m_waremech_01_dual-0', category = 'plushie', label = 'Angel Duck Plushie' }
