@@ -1,4 +1,5 @@
 local equipped = {} -- [src] = { [itemName] = true }
+local lastToggleAt = {} -- [src] = GetGameTimer()
 local detected = {
     framework = 'standalone',
     inventory = 'standalone',
@@ -55,7 +56,13 @@ local function detect()
         if ok then ESX = obj end
     end
 
-    print(('[djfivem-headcosmetics] framework=%s inventory=%s'):format(framework, inventory))
+    local count = 0
+    for _ in pairs(Config.Toys) do
+        count = count + 1
+    end
+    print(('[djfivem-headcosmetics] framework=%s inventory=%s toys=%s stream=%s'):format(
+        framework, inventory, count, Config.StreamResource or 'cosmetics'
+    ))
 end
 
 -- Collect every identifier this player might have been saved under.
@@ -298,6 +305,12 @@ local function toggle(src, name)
     if type(src) ~= 'number' or src <= 0 then return end
     if type(name) ~= 'string' or not Config.Toys[name] then return end
 
+    local now = GetGameTimer()
+    if now - (lastToggleAt[src] or 0) < (Config.ToggleCooldownMs or 250) then
+        return
+    end
+    lastToggleAt[src] = now
+
     equipped[src] = equipped[src] or {}
     local label = Config.Toys[name].label or name
 
@@ -385,6 +398,7 @@ AddEventHandler('playerDropped', function()
     restoreAttempts[src] = nil
     restoreDone[src] = nil
     sessionRemoved[src] = nil
+    lastToggleAt[src] = nil
 end)
 
 local function registerUsables()
@@ -493,6 +507,6 @@ if Config.DebugCommands then
         restoreDone[src] = true
         sessionRemoved[src] = nil
         pushState(src)
-        notify(src, 'Cleared head cosmetics', 'inform')
+        notify(src, 'Cleared cosmetics', 'inform')
     end, false)
 end
