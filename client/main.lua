@@ -1,9 +1,12 @@
 local spawned = {} -- [serverId] = { [itemName] = entity }
 local lastPed = {} -- [serverId] = ped handle
+local lastFingerprint = {} -- [serverId] = "ped:item,item"
 local playingAnim = {} -- [serverId] = { dict = string, name = string }
 local attaching = {} -- [serverId] = { [itemName] = true }
 local modelFailUntil = {} -- [hash] = GetGameTimer()
 local modelWaitStarted = {} -- [hash] = GetGameTimer()
+local streamWarned = false
+local lastToggleAt = 0
 
 local function notify(msg, nType)
     if not Config.Notify then return end
@@ -29,6 +32,15 @@ local function notify(msg, nType)
     EndTextCommandThefeedPostTicker(false, false)
 end
 
+local function warnMissingStream()
+    if streamWarned then return end
+    local resource = Config.StreamResource
+    if type(resource) ~= 'string' or resource == '' then return end
+    if GetResourceState(resource) == 'started' then return end
+    streamWarned = true
+    print(('[djfivem-headcosmetics] start the `%s` resource first — that is where the prop models are streamed'):format(resource))
+end
+
 local function loadModel(model)
     local hash = type(model) == 'number' and model or joaat(model)
     if HasModelLoaded(hash) then
@@ -45,12 +57,13 @@ local function loadModel(model)
         return hash
     end
 
-    -- Do not Wait() here: the 1s sync loop and statebag handler can run at the
+    -- Do not Wait() here: the sync loop and statebag handler can run at the
     -- same time, and a blocking load froze nearby players' props for seconds.
     modelWaitStarted[hash] = modelWaitStarted[hash] or GetGameTimer()
     if GetGameTimer() - modelWaitStarted[hash] > 8000 then
         modelFailUntil[hash] = GetGameTimer() + 15000
         modelWaitStarted[hash] = nil
+        warnMissingStream()
         return nil, 'failed'
     end
     return nil, 'waiting'
@@ -76,8 +89,31 @@ local function clearPlayer(serverId)
     end
     spawned[serverId] = nil
     lastPed[serverId] = nil
+    lastFingerprint[serverId] = nil
     playingAnim[serverId] = nil
     attaching[serverId] = nil
+end
+
+local function shouldHide(ped, category)
+    if not category or not Config.HideInVehicle or not Config.HideInVehicle[category] then
+        return false
+    end
+    return IsPedInAnyVehicle(ped, false) or IsEntityDead(ped)
+end
+
+local function applyHidden(entity, hidden)
+    if not entity or not DoesEntityExist(entity) then return end
+    SetEntityVisible(entity, not hidden, false)
+    SetEntityCollision(entity, false, false)
+end
+
+local function updateHidden(ped, serverId)
+    local props = spawned[serverId]
+    if not props or ped == 0 or not DoesEntityExist(ped) then return end
+    for name, entity in pairs(props) do
+        local data = Config.Toys[name]
+        applyHidden(entity, data and shouldHide(ped, data.category))
+    end
 end
 
 local function attachOne(ped, name)
@@ -87,7 +123,9 @@ local function attachOne(ped, name)
     local hash, reason = loadModel(data.model)
     if not hash then
         if reason == 'failed' then
-            print(('[djfivem-headcosmetics] model failed to load: %s (is stream/ + ytyp started?)'):format(data.model))
+            print(('[djfivem-headcosmetics] model failed to load: %s (is `%s` started and streaming this ydr?)'):format(
+                data.model, Config.StreamResource or 'cosmetics'
+            ))
         end
         return nil
     end
@@ -100,6 +138,7 @@ local function attachOne(ped, name)
     end
 
     SetEntityCollision(obj, false, false)
+    SetEntityLodDist(obj, 150)
     pcall(SetEntityCompletelyDisableCollision, obj, true, true)
     pcall(SetCanClimbOnEntity, obj, false)
     AttachEntityToEntity(
@@ -110,6 +149,7 @@ local function attachOne(ped, name)
         data.xR, data.yR, data.zR,
         true, true, false, true, 1, true
     )
+    applyHidden(obj, shouldHide(ped, data.category))
     SetModelAsNoLongerNeeded(hash)
     return obj
 end
@@ -171,12 +211,31 @@ end
 local function listToSet(list)
     local set = {}
     if type(list) ~= 'table' then return set end
-    for _, name in ipairs(list) do
+    for i = 1, #list do
+        local name = list[i]
         if type(name) == 'string' then
             set[name] = true
         end
     end
     return set
+end
+
+local function fingerprintOf(list, ped)
+    if type(list) ~= 'table' then
+        return tostring(ped) .. ':'
+    end
+    return tostring(ped) .. ':' .. table.concat(list, ',')
+end
+
+local function allPropsAlive(serverId)
+    local props = spawned[serverId]
+    if not props then return false end
+    for _, entity in pairs(props) do
+        if not DoesEntityExist(entity) then
+            return false
+        end
+    end
+    return true
 end
 
 local function getPlayerId(serverId)
@@ -198,10 +257,19 @@ local function syncPlayer(serverId, list)
     local ped = GetPlayerPed(player)
     if ped == 0 or not DoesEntityExist(ped) then return end
 
-    spawned[serverId] = spawned[serverId] or {}
     local want = listToSet(list)
     local pedChanged = lastPed[serverId] ~= ped
     lastPed[serverId] = ped
+
+    local fp = fingerprintOf(list, ped)
+    if not pedChanged and lastFingerprint[serverId] == fp and allPropsAlive(serverId) then
+        updateHidden(ped, serverId)
+        syncAnim(ped, serverId, want)
+        return
+    end
+
+    spawned[serverId] = spawned[serverId] or {}
+    attaching[serverId] = attaching[serverId] or {}
 
     local drop = {}
     for name, entity in pairs(spawned[serverId]) do
@@ -215,8 +283,7 @@ local function syncPlayer(serverId, list)
         spawned[serverId][name] = nil
     end
 
-    attaching[serverId] = attaching[serverId] or {}
-
+    local pending
     for name in pairs(want) do
         if Config.Toys[name] then
             local existing = spawned[serverId][name]
@@ -227,11 +294,20 @@ local function syncPlayer(serverId, list)
                 attaching[serverId][name] = nil
                 if obj then
                     spawned[serverId][name] = obj
+                else
+                    pending = true
                 end
             end
         end
     end
 
+    if not pending then
+        lastFingerprint[serverId] = fp
+    else
+        lastFingerprint[serverId] = nil
+    end
+
+    updateHidden(ped, serverId)
     syncAnim(ped, serverId, want)
 end
 
@@ -270,6 +346,17 @@ CreateThread(function()
     end
 end)
 
+-- Local player only: hide/show bulky props as soon as they enter a vehicle.
+CreateThread(function()
+    while true do
+        Wait(150)
+        local serverId = GetPlayerServerId(PlayerId())
+        if spawned[serverId] then
+            updateHidden(PlayerPedId(), serverId)
+        end
+    end
+end)
+
 AddEventHandler('onResourceStop', function(resource)
     if resource ~= GetCurrentResourceName() then return end
     local localId = GetPlayerServerId(PlayerId())
@@ -285,6 +372,9 @@ end)
 
 local function requestToggle(name)
     if type(name) ~= 'string' or not Config.Toys[name] then return end
+    local now = GetGameTimer()
+    if now - lastToggleAt < (Config.ToggleCooldownMs or 250) then return end
+    lastToggleAt = now
     TriggerServerEvent('djfivem-headcosmetics:toggle', name)
 end
 
@@ -315,6 +405,7 @@ AddEventHandler('onClientResourceStart', function(resource)
     if resource ~= GetCurrentResourceName() then return end
     CreateThread(function()
         Wait(1500)
+        warnMissingStream()
         tellServerReady()
     end)
 end)
@@ -339,5 +430,10 @@ exports('ReattachLocal', function(name)
     spawned[serverId] = spawned[serverId] or {}
     deleteProp(spawned[serverId][name])
     spawned[serverId][name] = attachOne(ped, name)
+    lastFingerprint[serverId] = nil
     return spawned[serverId][name]
+end)
+
+exports('GetCatalog', function()
+    return Config.Toys
 end)
