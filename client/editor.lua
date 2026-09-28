@@ -11,12 +11,12 @@ end
 local function dumpOffsets(name, data)
     local snippet
     if data.animDict and data.animDict ~= '' then
-        snippet = ([[    ['%s'] = { model = '%s', bone = %s, x = %.4f, y = %.4f, z = %.4f, xR = %.2f, yR = %.2f, zR = %.2f, animDict = '%s', animName = '%s' },]]):format(
-            name, data.model or name, data.bone or 24817, data.x, data.y, data.z, data.xR, data.yR, data.zR, data.animDict, data.animName or ''
+        snippet = ([[    ['%s'] = { model = '%s', category = '%s', bone = %s, x = %.4f, y = %.4f, z = %.4f, xR = %.2f, yR = %.2f, zR = %.2f, animDict = '%s', animName = '%s' },]]):format(
+            name, data.model or name, data.category or 'plushie', data.bone or 24817, data.x, data.y, data.z, data.xR, data.yR, data.zR, data.animDict, data.animName or ''
         )
     else
-        snippet = ([[    ['%s'] = { model = '%s', bone = %s, x = %.4f, y = %.4f, z = %.4f, xR = %.2f, yR = %.2f, zR = %.2f },]]):format(
-            name, data.model or name, data.bone or 31086, data.x, data.y, data.z, data.xR, data.yR, data.zR
+        snippet = ([[    ['%s'] = { model = '%s', category = '%s', bone = %s, x = %.4f, y = %.4f, z = %.4f, xR = %.2f, yR = %.2f, zR = %.2f },]]):format(
+            name, data.model or name, data.category or 'misc', data.bone or 31086, data.x, data.y, data.z, data.xR, data.yR, data.zR
         )
     end
     print('^2[djfivem-headcosmetics] paste this into Config.Toys:^7')
@@ -70,7 +70,7 @@ RegisterCommand(Config.EditorCommand, function(_, args)
         name = wearing[1]
     end
     if not name then
-        TriggerEvent('djfivem-headcosmetics:notify', 'Usage: /' .. Config.EditorCommand .. ' black_blue_crown', 'error')
+        TriggerEvent('djfivem-headcosmetics:notify', 'Usage: /' .. Config.EditorCommand .. ' angelwings_blue', 'error')
         return
     end
     startEditor(name)
